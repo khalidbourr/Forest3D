@@ -1,0 +1,3160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.7">
+  <world name="forest_world">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <light name="ambient" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.7 0.7 0.7 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+    </light>
+    <light name="point_light_0" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>10 10 5 0 0 0</pose>
+      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation />
+      <range>20</range>
+    </light>
+    <light name="point_light_1" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>-10 10 5 0 0 0</pose>
+      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation />
+      <range>20</range>
+    </light>
+    <light name="point_light_2" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>10 -10 5 0 0 0</pose>
+      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation />
+      <range>20</range>
+    </light>
+    <light name="point_light_3" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>-10 -10 5 0 0 0</pose>
+      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation />
+      <range>20</range>
+    </light>
+    <include>
+      <uri>model://ground</uri>
+      <name>terrain</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <include>
+      <uri>model://rock/coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6</uri>
+      <name>rock_0</name>
+      <pose>5.038612967950829 25.0 4.612650589747054 0.020526107199087706 0.020526107199087706 4.0453314402649</pose>
+      <scale>1.3726114956536564 1.3726114956536564 1.3726114956536564</scale>
+    </include>
+    <include>
+      <uri>model://rock/coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6</uri>
+      <name>rock_1</name>
+      <pose>25.0 -21.067377792396865 0.26990509862142453 0.1000828694880794 0.1000828694880794 5.409748842223894</pose>
+      <scale>0.9419255202957748 0.9419255202957748 0.9419255202957748</scale>
+    </include>
+    <include>
+      <uri>model://rock/coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6</uri>
+      <name>rock_2</name>
+      <pose>-25.25 -12.126390657038474 2.9011178312958275 -0.11217474827518448 -0.11217474827518448 1.9116152715162422</pose>
+      <scale>1.4904745355730626 1.4904745355730626 1.4904745355730626</scale>
+    </include>
+    <include>
+      <uri>model://rock/coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6</uri>
+      <name>rock_3</name>
+      <pose>-1.0334722663028586 -11.65645544916484 1.908291968827695 0.010543970755129806 0.010543970755129806 5.046167452394146</pose>
+      <scale>0.8845275844704997 0.8845275844704997 0.8845275844704997</scale>
+    </include>
+    <include>
+      <uri>model://rock/coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6</uri>
+      <name>rock_4</name>
+      <pose>25.0 -3.6120551514115995 2.1340196974624734 0.08966514518700638 0.08966514518700638 1.260331852048413</pose>
+      <scale>1.4235072904477297 1.4235072904477297 1.4235072904477297</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_0</name>
+      <pose>5.801500712547401 -14.567372549052289 1.5798511988786073 0.011762269670037129 0.011762269670037129 0.6112862673257784</pose>
+      <scale>1.4787285792036884 1.4787285792036884 1.4787285792036884</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_9</name>
+      <pose>14.774039243624948 10.928163705089418 3.491577659008274 0.014643887869041083 0.014643887869041083 4.470304328632065</pose>
+      <scale>0.8815799916246592 0.8815799916246592 0.8815799916246592</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_13</name>
+      <pose>-11.017616049121576 16.496957365907747 4.113161638578868 0.01873907092325504 0.01873907092325504 4.01783553232126</pose>
+      <scale>1.038320691936231 1.038320691936231 1.038320691936231</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_17</name>
+      <pose>-23.482809319338983 -19.930423107495855 2.2385177458501 -0.016177527270670913 -0.016177527270670913 4.333964952488352</pose>
+      <scale>1.0680993320953047 1.0680993320953047 1.0680993320953047</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_23</name>
+      <pose>21.555275530143454 -6.698412123738983 1.9809638168606103 0.04321626557761635 0.04321626557761635 4.278026572898304</pose>
+      <scale>1.3895123817782218 1.3895123817782218 1.3895123817782218</scale>
+    </include>
+    <include>
+      <uri>model://tree/MT_PM_V60_Alnus_cremastogyne_01_01</uri>
+      <name>tree_24</name>
+      <pose>-14.715667877022772 1.1922531317717464 3.4055850387634807 0.0390930386898799 0.0390930386898799 0.4572989214675996</pose>
+      <scale>0.9877929486411806 0.9877929486411806 0.9877929486411806</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Agave_sisalana_01_01</uri>
+      <name>bush_0</name>
+      <pose>-8.940138170668508 -19.580025950662336 1.4623244267191524 0 0 3.2481387408229523</pose>
+      <scale>0.3749401368997527 0.3749401368997527 0.3749401368997527</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Agave_sisalana_01_01</uri>
+      <name>bush_1</name>
+      <pose>22.311100316190313 23.021286943078188 4.351609654584837 0 0 4.324531514418659</pose>
+      <scale>0.3972004119509154 0.3972004119509154 0.3972004119509154</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Cistus_albidus_01_01</uri>
+      <name>bush_2</name>
+      <pose>-22.049873822600834 -15.02984753328011 2.5037953309461405 0 0 5.201568382763094</pose>
+      <scale>0.9588669791918536 0.9588669791918536 0.9588669791918536</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Agave_sisalana_01_01</uri>
+      <name>bush_3</name>
+      <pose>-5.181604412252437 -14.852726520690744 1.813086078162889 0 0 1.293503595581267</pose>
+      <scale>0.46546137010740174 0.46546137010740174 0.46546137010740174</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Agave_sisalana_01_01</uri>
+      <name>bush_6</name>
+      <pose>-7.5111903768868835 -17.361330454439695 1.7137031405271081 0 0 4.211441336881384</pose>
+      <scale>0.8762747530548753 0.8762747530548753 0.8762747530548753</scale>
+    </include>
+    <include>
+      <uri>model://bush/MT_PM_V60_Agave_sisalana_01_01</uri>
+      <name>bush_9</name>
+      <pose>-1.4433415302470785 -2.394258436998161 2.427713366055882 0 0 5.198215818010305</pose>
+      <scale>0.9690240800898522 0.9690240800898522 0.9690240800898522</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_0</name>
+      <pose>24.997170279192062 -4.019310606998502 2.1308878569685885 0 0 5.957583793395995</pose>
+      <scale>0.36276969081873983 0.36276969081873983 0.36276969081873983</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_1</name>
+      <pose>-2.909933733023845 11.512693357144506 3.627989977979064 0 0 3.00879060218984</pose>
+      <scale>0.41447665762510133 0.41447665762510133 0.41447665762510133</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_2</name>
+      <pose>-2.6634538147000875 -21.161779875729486 1.139121053459888 0 0 3.1458334049310532</pose>
+      <scale>0.23465764822483806 0.23465764822483806 0.23465764822483806</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_3</name>
+      <pose>-24.6872636324738 11.689101815234572 4.439506464462693 0 0 4.684274099280618</pose>
+      <scale>0.37929619372467366 0.37929619372467366 0.37929619372467366</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_4</name>
+      <pose>-22.8975724325952 15.720691560762546 4.579418790158223 0 0 4.489971795262368</pose>
+      <scale>0.5088617492422676 0.5088617492422676 0.5088617492422676</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_5</name>
+      <pose>-24.344164062258688 -23.161913299970806 1.9683492016701178 0 0 2.0260626622225564</pose>
+      <scale>0.3433572332695195 0.3433572332695195 0.3433572332695195</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_6</name>
+      <pose>-23.06048517499393 -0.31468839523596515 3.6105615288904804 0 0 0.32217496785222394</pose>
+      <scale>0.4151767883697586 0.4151767883697586 0.4151767883697586</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_7</name>
+      <pose>-16.328860635589965 -16.018359322554645 2.028368022718817 0 0 1.4740752536542123</pose>
+      <scale>0.3131945686980499 0.3131945686980499 0.3131945686980499</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_8</name>
+      <pose>-23.63797016063736 -0.421209066947668 3.6662128378343137 0 0 0.5600911881827175</pose>
+      <scale>0.4365517845615201 0.4365517845615201 0.4365517845615201</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_9</name>
+      <pose>-6.597819718450676 -19.993523000715854 1.357985470609566 0 0 0.09412931693980449</pose>
+      <scale>0.5223445191164643 0.5223445191164643 0.5223445191164643</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_10</name>
+      <pose>7.326290473353808 -2.3202070697821746 2.603445490215071 0 0 5.873343213280127</pose>
+      <scale>0.5536560607350731 0.5536560607350731 0.5536560607350731</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_11</name>
+      <pose>-23.712721116540386 10.0614671432106 4.294536782878398 0 0 2.577459477761652</pose>
+      <scale>0.5693419933776556 0.5693419933776556 0.5693419933776556</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_12</name>
+      <pose>14.235265112635794 -1.676330702896017 2.603749624931159 0 0 1.9487972482888307</pose>
+      <scale>0.4876771967612224 0.4876771967612224 0.4876771967612224</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_13</name>
+      <pose>5.024186454971286 -9.825004872996365 1.8735718279558657 0 0 1.0811522512650964</pose>
+      <scale>0.2946284583896962 0.2946284583896962 0.2946284583896962</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_14</name>
+      <pose>6.921311015371479 -0.3650665179551069 2.790154862965096 0 0 3.5843792405583637</pose>
+      <scale>0.29585779226175796 0.29585779226175796 0.29585779226175796</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_15</name>
+      <pose>-21.43429847664671 18.780527480018677 4.690130352586308 0 0 6.085663662313584</pose>
+      <scale>0.3628687463662658 0.3628687463662658 0.3628687463662658</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_16</name>
+      <pose>24.009884722498605 -3.8012071251674833 2.0731035359151213 0 0 3.946147847454235</pose>
+      <scale>0.5310893935344743 0.5310893935344743 0.5310893935344743</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_17</name>
+      <pose>-3.783159511362612 -2.589287883254592 2.663709755161155 0 0 3.7240887947256223</pose>
+      <scale>0.2521317360132881 0.2521317360132881 0.2521317360132881</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_18</name>
+      <pose>-17.458007910715082 -11.6715811878526 2.55186627468207 0 0 5.123950311308037</pose>
+      <scale>0.32843803137824445 0.32843803137824445 0.32843803137824445</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_19</name>
+      <pose>-0.4888171011813611 -15.985638980984362 1.544905292812466 0 0 0.23881006288853837</pose>
+      <scale>0.552915198300825 0.552915198300825 0.552915198300825</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_20</name>
+      <pose>-6.493819372707577 -14.31961102424837 1.9006762130918804 0 0 6.2179228895665855</pose>
+      <scale>0.2630872270547959 0.2630872270547959 0.2630872270547959</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_21</name>
+      <pose>24.7234552263919 21.837998871331003 4.160584815271948 0 0 4.624424004952004</pose>
+      <scale>0.2800083425904792 0.2800083425904792 0.2800083425904792</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_22</name>
+      <pose>5.9264570568345505 20.674381314334212 4.388027473214398 0 0 4.711273497194425</pose>
+      <scale>0.2699438223013607 0.2699438223013607 0.2699438223013607</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_23</name>
+      <pose>-20.816077946005556 11.725920558907447 4.273404589926402 0 0 2.9231846258689145</pose>
+      <scale>0.36192636331228073 0.36192636331228073 0.36192636331228073</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_24</name>
+      <pose>24.71504646582612 21.228192103644957 4.198150065993423 0 0 1.7807713594956613</pose>
+      <scale>0.3426328115246394 0.3426328115246394 0.3426328115246394</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_25</name>
+      <pose>-22.576268656668844 9.91308513950979 4.259237044648136 0 0 4.701157218977648</pose>
+      <scale>0.5292092490984588 0.5292092490984588 0.5292092490984588</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_26</name>
+      <pose>6.482724132753297 -23.399902871616288 0.6402799351208762 0 0 0.3617759305159323</pose>
+      <scale>0.4281033619792047 0.4281033619792047 0.4281033619792047</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_27</name>
+      <pose>22.867585805480275 -12.128302638752553 1.4215765269058454 0 0 3.6027772559902442</pose>
+      <scale>0.563546865085866 0.563546865085866 0.563546865085866</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_28</name>
+      <pose>7.358121530718179 13.180318037577251 3.7719146957340364 0 0 3.9045780055177337</pose>
+      <scale>0.37750471097403426 0.37750471097403426 0.37750471097403426</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_29</name>
+      <pose>-19.168448758938375 -14.067558759329147 2.3952596339506003 0 0 4.144187169572644</pose>
+      <scale>0.40353199012223595 0.40353199012223595 0.40353199012223595</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_30</name>
+      <pose>18.549207214702065 -17.071578764385734 1.1407681688843063 0 0 2.016742907518147</pose>
+      <scale>0.27448082095773424 0.27448082095773424 0.27448082095773424</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_31</name>
+      <pose>23.832190959619226 -10.38810748324584 1.5710258570028426 0 0 3.9481848678618086</pose>
+      <scale>0.26031557731506544 0.26031557731506544 0.26031557731506544</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_32</name>
+      <pose>-20.13321262459133 -9.94510602011646 2.851252958253397 0 0 5.123851180992714</pose>
+      <scale>0.3703010213284942 0.3703010213284942 0.3703010213284942</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_33</name>
+      <pose>7.49226348999575 20.578907214966023 4.297906556462086 0 0 5.278463192618239</pose>
+      <scale>0.40384847203408636 0.40384847203408636 0.40384847203408636</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_34</name>
+      <pose>21.61280250054456 21.418991809031084 4.101304336808797 0 0 6.225092873908848</pose>
+      <scale>0.30404771778256234 0.30404771778256234 0.30404771778256234</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_35</name>
+      <pose>-13.031055135938445 -14.800974617113107 2.002965443029219 0 0 0.5966213363467059</pose>
+      <scale>0.2577621681389404 0.2577621681389404 0.2577621681389404</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_36</name>
+      <pose>-21.80889740842663 -19.337431638021616 2.086674315373961 0 0 1.5727513542696507</pose>
+      <scale>0.2647936148648261 0.2647936148648261 0.2647936148648261</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_37</name>
+      <pose>-5.645494142160047 24.896824493579366 4.667915791552033 0 0 1.6013549791771606</pose>
+      <scale>0.42235880230715817 0.42235880230715817 0.42235880230715817</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_38</name>
+      <pose>13.722321930802856 -12.515356368780726 1.825653921225158 0 0 5.195376438906132</pose>
+      <scale>0.26398084172557235 0.26398084172557235 0.26398084172557235</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_39</name>
+      <pose>23.31041601028663 16.172577051592576 3.7449236403211534 0 0 0.5291747053920556</pose>
+      <scale>0.47752698426137263 0.47752698426137263 0.47752698426137263</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_40</name>
+      <pose>-15.132687307126925 4.013615147312578 3.523296113359173 0 0 3.082224527665317</pose>
+      <scale>0.44347659925755084 0.44347659925755084 0.44347659925755084</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_41</name>
+      <pose>-21.23538298226699 -7.275121771967019 3.1263993983892693 0 0 4.19013752523903</pose>
+      <scale>0.5549423545712011 0.5549423545712011 0.5549423545712011</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_42</name>
+      <pose>17.59920383867407 5.456117615195698 2.9712362067859703 0 0 4.088559512416932</pose>
+      <scale>0.57390675837513 0.57390675837513 0.57390675837513</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_43</name>
+      <pose>-1.9477511957537068 -3.8510091602841356 2.4945632223215033 0 0 2.4067605540671546</pose>
+      <scale>0.4425167463048575 0.4425167463048575 0.4425167463048575</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_44</name>
+      <pose>10.837608004816197 16.728026904437726 3.9948232242772694 0 0 5.178730376897751</pose>
+      <scale>0.35551947354349445 0.35551947354349445 0.35551947354349445</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_45</name>
+      <pose>4.90951035479695 -3.7747008513479727 2.4323571137700775 0 0 3.1402282448755243</pose>
+      <scale>0.2718927625922935 0.2718927625922935 0.2718927625922935</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_46</name>
+      <pose>11.344444057308863 5.127918003146302 3.1558951842204928 0 0 1.871878195193646</pose>
+      <scale>0.5673288980469984 0.5673288980469984 0.5673288980469984</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_47</name>
+      <pose>2.8444715643809744 18.459510905371467 4.135693937885746 0 0 0.3403671016836038</pose>
+      <scale>0.4921426496382118 0.4921426496382118 0.4921426496382118</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_48</name>
+      <pose>-13.895017060002704 13.856463314796272 4.0642928880213836 0 0 4.5003993129150945</pose>
+      <scale>0.5050051340414821 0.5050051340414821 0.5050051340414821</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_49</name>
+      <pose>-13.266185827727364 7.588157224419497 3.7353057438158856 0 0 2.7080075289730665</pose>
+      <scale>0.3326477817365455 0.3326477817365455 0.3326477817365455</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_50</name>
+      <pose>24.646155188307517 -12.976141943745372 1.278342574244846 0 0 2.371690302646117</pose>
+      <scale>0.44814975191072726 0.44814975191072726 0.44814975191072726</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_51</name>
+      <pose>-15.266877933387773 -12.494512824668641 2.3474220185599317 0 0 5.967585268658434</pose>
+      <scale>0.4565433327253692 0.4565433327253692 0.4565433327253692</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_52</name>
+      <pose>10.920730354693461 2.8993380608030854 3.012079831920771 0 0 5.0779159665659135</pose>
+      <scale>0.5742178366681971 0.5742178366681971 0.5742178366681971</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_53</name>
+      <pose>10.326993418999493 15.709041257512538 3.8973162369219088 0 0 5.994726378378444</pose>
+      <scale>0.5959124317418731 0.5959124317418731 0.5959124317418731</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_54</name>
+      <pose>-16.416803658901706 -24.95514470655927 1.2793415931283532 0 0 2.9911674835634843</pose>
+      <scale>0.43059837960693675 0.43059837960693675 0.43059837960693675</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_55</name>
+      <pose>-2.2340209691703983 19.339372329901295 4.238693145591374 0 0 1.634473716599898</pose>
+      <scale>0.27057246880900376 0.27057246880900376 0.27057246880900376</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_56</name>
+      <pose>10.175204615206937 -1.903671277943026 2.6812346092352675 0 0 2.2925420829913943</pose>
+      <scale>0.4610318066225871 0.4610318066225871 0.4610318066225871</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_57</name>
+      <pose>12.5273366994669 -18.856061144958797 1.2602468081570755 0 0 0.13506117516181568</pose>
+      <scale>0.40724465674406096 0.40724465674406096 0.40724465674406096</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_58</name>
+      <pose>14.523137655597694 -6.078072882355389 2.249812730719635 0 0 3.2448315857852847</pose>
+      <scale>0.25099731303201994 0.25099731303201994 0.25099731303201994</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_59</name>
+      <pose>8.15883625069715 -14.623032196317947 1.634823235363622 0 0 4.307874414680766</pose>
+      <scale>0.4265351081881579 0.4265351081881579 0.4265351081881579</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_60</name>
+      <pose>-18.97382979409157 6.5811383101855085 3.8758998903506896 0 0 5.744120880010723</pose>
+      <scale>0.20328919481355678 0.20328919481355678 0.20328919481355678</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_61</name>
+      <pose>21.307465742464288 -9.080246272562519 1.7136254738594088 0 0 3.704341208852993</pose>
+      <scale>0.32408526037327234 0.32408526037327234 0.32408526037327234</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_62</name>
+      <pose>16.846839470509124 0.6402738113369537 2.681744136014386 0 0 4.495503359660204</pose>
+      <scale>0.5911783895746143 0.5911783895746143 0.5911783895746143</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_63</name>
+      <pose>15.366903614161451 2.373518632225288 2.832665437438131 0 0 0.7389749231065794</pose>
+      <scale>0.20771357910025556 0.20771357910025556 0.20771357910025556</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_64</name>
+      <pose>-13.726830103022664 -19.9706699880812 1.4926897359113436 0 0 4.362866323613505</pose>
+      <scale>0.4456545010462325 0.4456545010462325 0.4456545010462325</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_65</name>
+      <pose>2.028814609173345 22.260735364940935 4.406128204943442 0 0 1.1435491614909044</pose>
+      <scale>0.5717823599393173 0.5717823599393173 0.5717823599393173</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_66</name>
+      <pose>-20.38597669113395 12.425135636053213 4.309257621892005 0 0 4.241137347364371</pose>
+      <scale>0.2458360937892508 0.2458360937892508 0.2458360937892508</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_67</name>
+      <pose>12.436549435918863 2.243237396214475 2.9957522875946556 0 0 5.6323870074784566</pose>
+      <scale>0.32459319460693853 0.32459319460693853 0.32459319460693853</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_68</name>
+      <pose>-1.9651030783834322 -20.50756023188248 1.1484870216820262 0 0 4.913368806706899</pose>
+      <scale>0.3207808152163073 0.3207808152163073 0.3207808152163073</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_69</name>
+      <pose>7.703031469985611 -14.414883716509765 1.6055335161668305 0 0 3.2807835119621296</pose>
+      <scale>0.28584959209912436 0.28584959209912436 0.28584959209912436</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_70</name>
+      <pose>-10.900873722533603 -11.409120517437039 2.2344681656687335 0 0 4.424926949673015</pose>
+      <scale>0.280528091785843 0.280528091785843 0.280528091785843</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_71</name>
+      <pose>1.347677398571193 -23.828588647598885 0.5525950179407402 0 0 6.092585333636221</pose>
+      <scale>0.2901061009873346 0.2901061009873346 0.2901061009873346</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_72</name>
+      <pose>20.12039548847669 15.056521538907404 3.5963257471833128 0 0 1.4775890380215158</pose>
+      <scale>0.20774801336124227 0.20774801336124227 0.20774801336124227</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_73</name>
+      <pose>16.61418355092166 -16.090386695945064 1.3560787307413524 0 0 0.4634657716158962</pose>
+      <scale>0.2706543698350147 0.2706543698350147 0.2706543698350147</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_74</name>
+      <pose>1.881863951361595 -7.965689104725168 2.007387484700356 0 0 2.0893634816567337</pose>
+      <scale>0.2594594181585431 0.2594594181585431 0.2594594181585431</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_75</name>
+      <pose>7.7610273284037135 -12.664202088671354 1.7466215339177886 0 0 4.173590803732728</pose>
+      <scale>0.3131587502379799 0.3131587502379799 0.3131587502379799</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_76</name>
+      <pose>-23.233777753374046 -9.429981674047214 3.017785592923417 0 0 4.597027782717464</pose>
+      <scale>0.5558913949272284 0.5558913949272284 0.5558913949272284</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_77</name>
+      <pose>-9.99425883906132 -12.81803645918714 2.189047256122927 0 0 4.608650835025069</pose>
+      <scale>0.3372687753806553 0.3372687753806553 0.3372687753806553</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_78</name>
+      <pose>11.5555587355312 23.39007041347189 4.4322249673916065 0 0 0.6160870228066911</pose>
+      <scale>0.4560391966838834 0.4560391966838834 0.4560391966838834</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_79</name>
+      <pose>-17.151499335247365 9.700296917345426 3.9771065242835424 0 0 3.451142645322747</pose>
+      <scale>0.47099562957278535 0.47099562957278535 0.47099562957278535</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_80</name>
+      <pose>15.717675790652436 11.705894217259143 3.4413171485658753 0 0 0.5029698985345639</pose>
+      <scale>0.53382064612428 0.53382064612428 0.53382064612428</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_81</name>
+      <pose>-4.040647254906169 -9.4557621107916 2.2074681074879225 0 0 5.0473013554842545</pose>
+      <scale>0.27248580250214227 0.27248580250214227 0.27248580250214227</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_82</name>
+      <pose>-6.193266147899784 21.874793144283238 4.470634310764833 0 0 2.8439501227740362</pose>
+      <scale>0.2006658202337418 0.2006658202337418 0.2006658202337418</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_83</name>
+      <pose>-14.65677359246353 16.452452352035543 4.312163758525224 0 0 5.233575195480191</pose>
+      <scale>0.21344350759160605 0.21344350759160605 0.21344350759160605</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_84</name>
+      <pose>9.86401882132727 -1.041625524796789 2.7819836079118043 0 0 1.207962478319725</pose>
+      <scale>0.25685817032184993 0.25685817032184993 0.25685817032184993</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_85</name>
+      <pose>-21.143541582722275 15.663408302277972 4.518488748402962 0 0 4.213148536861326</pose>
+      <scale>0.4398976679909267 0.4398976679909267 0.4398976679909267</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_86</name>
+      <pose>-13.118485875579752 3.8460306830537583 3.5023458230713396 0 0 5.182896916346342</pose>
+      <scale>0.5055794007420535 0.5055794007420535 0.5055794007420535</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_87</name>
+      <pose>-11.040207573148887 -20.01616425682847 1.412034307326774 0 0 5.299007447466114</pose>
+      <scale>0.43779497753627994 0.43779497753627994 0.43779497753627994</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_88</name>
+      <pose>-25.10641674892656 2.9116908748563723 3.9519418686379333 0 0 2.4209659008465474</pose>
+      <scale>0.516990271681533 0.516990271681533 0.516990271681533</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_89</name>
+      <pose>-24.492189241935645 -14.784147026626282 2.6479105456974352 0 0 2.395847833760694</pose>
+      <scale>0.508062390389898 0.508062390389898 0.508062390389898</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_90</name>
+      <pose>2.554622400527549 10.401460231643767 3.495691357391799 0 0 4.628342804487571</pose>
+      <scale>0.2687969075591051 0.2687969075591051 0.2687969075591051</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_91</name>
+      <pose>-11.121868676180055 -15.973359034636482 1.8730347344288407 0 0 5.4277548558660325</pose>
+      <scale>0.5591345482678215 0.5591345482678215 0.5591345482678215</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_92</name>
+      <pose>23.75886528268132 23.375910708873995 4.29236444063339 0 0 0.7951232220603298</pose>
+      <scale>0.4152479860627704 0.4152479860627704 0.4152479860627704</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_93</name>
+      <pose>21.662209065794833 22.279343095180757 4.21543746586558 0 0 0.12237766369906396</pose>
+      <scale>0.5888234953284094 0.5888234953284094 0.5888234953284094</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_94</name>
+      <pose>-14.387558346310545 24.32863964604205 4.71478227657399 0 0 3.9080505932661795</pose>
+      <scale>0.5706817627524129 0.5706817627524129 0.5706817627524129</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_95</name>
+      <pose>6.613213352857191 -11.707756649215693 1.7921147708551166 0 0 2.053993640869379</pose>
+      <scale>0.4649246635643406 0.4649246635643406 0.4649246635643406</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_96</name>
+      <pose>-8.420851069508714 24.74059662057386 4.656053133416503 0 0 2.1645677451139154</pose>
+      <scale>0.5001396665554436 0.5001396665554436 0.5001396665554436</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_97</name>
+      <pose>12.860339211311008 -20.104083062501502 1.1270531579920802 0 0 2.6615864178201245</pose>
+      <scale>0.5338755252938223 0.5338755252938223 0.5338755252938223</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_98</name>
+      <pose>-6.4296576591954455 24.47430069074271 4.629219375682007 0 0 3.4663151328150303</pose>
+      <scale>0.4213546330402965 0.4213546330402965 0.4213546330402965</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_99</name>
+      <pose>-10.863854211427949 14.980255550114002 4.054225490723805 0 0 1.1075312475160517</pose>
+      <scale>0.5033166660223232 0.5033166660223232 0.5033166660223232</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_100</name>
+      <pose>-9.635467866357038 4.436856545734646 3.3552264025923524 0 0 1.5224444697226822</pose>
+      <scale>0.3201613416040604 0.3201613416040604 0.3201613416040604</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_101</name>
+      <pose>18.707939571812545 -9.229805180739746 1.8226210505691054 0 0 1.8316312883850456</pose>
+      <scale>0.39005604484750467 0.39005604484750467 0.39005604484750467</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_102</name>
+      <pose>-20.985182805572357 1.3136469881461181 3.6308945995638577 0 0 3.6649130787048283</pose>
+      <scale>0.5558362269697859 0.5558362269697859 0.5558362269697859</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_103</name>
+      <pose>-6.6986227220790795 -8.52317669009539 2.3711370861512213 0 0 4.580575099824055</pose>
+      <scale>0.22282867949960294 0.22282867949960294 0.22282867949960294</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_104</name>
+      <pose>4.550895137320822 -18.11697228167969 1.1491424698757553 0 0 1.980125065861527</pose>
+      <scale>0.29559779224514526 0.29559779224514526 0.29559779224514526</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_105</name>
+      <pose>-3.98803642992857 -21.90564917748908 1.021917989710059 0 0 0.9197906630126399</pose>
+      <scale>0.48674365734000374 0.48674365734000374 0.48674365734000374</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_106</name>
+      <pose>-4.236521453438026 -22.805863298831046 0.9766814574687472 0 0 5.602930609602586</pose>
+      <scale>0.4119877859283396 0.4119877859283396 0.4119877859283396</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_107</name>
+      <pose>0.7869549849495243 24.18487746064232 4.5540981041672115 0 0 2.3056812506976456</pose>
+      <scale>0.2960040545989275 0.2960040545989275 0.2960040545989275</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_108</name>
+      <pose>-9.070042889287546 22.292537423699166 4.5933951983533206 0 0 0.7201664239816328</pose>
+      <scale>0.52083017586245 0.52083017586245 0.52083017586245</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_109</name>
+      <pose>8.599748502593748 13.652339652207985 3.7461225199741452 0 0 2.5256033997695733</pose>
+      <scale>0.20247846326928676 0.20247846326928676 0.20247846326928676</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_110</name>
+      <pose>21.01476481774271 -10.387326603950914 1.544125366730066 0 0 3.084805348289659</pose>
+      <scale>0.25056207659180335 0.25056207659180335 0.25056207659180335</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_111</name>
+      <pose>1.5746827291425305 24.423604316173638 4.548548948986565 0 0 0.9066390149965057</pose>
+      <scale>0.32698718773397445 0.32698718773397445 0.32698718773397445</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_112</name>
+      <pose>11.403382892280966 -25.125238241379048 0.7259492438112902 0 0 0.5325660596059296</pose>
+      <scale>0.5647655725326698 0.5647655725326698 0.5647655725326698</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_113</name>
+      <pose>19.08492848888507 -17.147446004198002 1.0597684599066945 0 0 2.4905231325140798</pose>
+      <scale>0.2391794625820427 0.2391794625820427 0.2391794625820427</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_114</name>
+      <pose>-10.308568289958751 17.780624427212807 4.223419521040909 0 0 4.2647316393648005</pose>
+      <scale>0.2992645484158825 0.2992645484158825 0.2992645484158825</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_115</name>
+      <pose>17.66158847354359 -17.22840221722921 1.1937054627754609 0 0 4.075692571695346</pose>
+      <scale>0.4640879619420456 0.4640879619420456 0.4640879619420456</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_116</name>
+      <pose>21.148698565400522 19.744955096672136 4.021825913776465 0 0 2.887966692270087</pose>
+      <scale>0.5632914940736309 0.5632914940736309 0.5632914940736309</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_117</name>
+      <pose>-22.53056227917323 -0.7227258415889892 3.544644821460256 0 0 0.7425600250689213</pose>
+      <scale>0.5205941708280719 0.5205941708280719 0.5205941708280719</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_118</name>
+      <pose>-4.769167867050509 -22.57478260019906 0.9739286846600864 0 0 1.5232287987742619</pose>
+      <scale>0.5436496597870875 0.5436496597870875 0.5436496597870875</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_119</name>
+      <pose>14.24808906972659 -5.368566303081451 2.4024267891117375 0 0 0.7152498023558461</pose>
+      <scale>0.4112690984221147 0.4112690984221147 0.4112690984221147</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_120</name>
+      <pose>15.748349873565736 -14.509300894275041 1.5562491533139198 0 0 3.4711967828909467</pose>
+      <scale>0.5627081365976891 0.5627081365976891 0.5627081365976891</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_121</name>
+      <pose>-12.085597138266317 2.9676468270448275 3.402463847713035 0 0 2.6300502540528345</pose>
+      <scale>0.30515582973327715 0.30515582973327715 0.30515582973327715</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_122</name>
+      <pose>19.250223678729576 23.363409321230577 4.229705946593577 0 0 3.9886919421750298</pose>
+      <scale>0.4873010704662821 0.4873010704662821 0.4873010704662821</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_123</name>
+      <pose>-1.8119609590257788 23.295865498099005 4.425096275906732 0 0 1.9946439060079018</pose>
+      <scale>0.5842170882722784 0.5842170882722784 0.5842170882722784</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_124</name>
+      <pose>5.3682420216632885 6.912369648391589 3.2439881090243783 0 0 3.4757123726668926</pose>
+      <scale>0.24303072105972065 0.24303072105972065 0.24303072105972065</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_125</name>
+      <pose>8.552622353927283 -2.6999152290909763 2.6215709075410114 0 0 5.636122854653655</pose>
+      <scale>0.20131440675867648 0.20131440675867648 0.20131440675867648</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_126</name>
+      <pose>-5.857596308757479 -23.49546982785779 0.8695428225362434 0 0 4.243806221754897</pose>
+      <scale>0.3808302334739795 0.3808302334739795 0.3808302334739795</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_127</name>
+      <pose>9.193163118835002 8.059901492243561 3.3220501014824175 0 0 5.992156187486192</pose>
+      <scale>0.38790208771033824 0.38790208771033824 0.38790208771033824</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_128</name>
+      <pose>-14.323102197454803 7.523360922005544 3.7208873268722313 0 0 4.4387107701101645</pose>
+      <scale>0.3362364059321442 0.3362364059321442 0.3362364059321442</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_129</name>
+      <pose>11.875770047287908 3.9899934095446277 3.0180922479203165 0 0 4.6303026363819635</pose>
+      <scale>0.5030530107166453 0.5030530107166453 0.5030530107166453</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_130</name>
+      <pose>5.781501949957519 -12.026650177595469 1.7007087142434474 0 0 3.5502358327496575</pose>
+      <scale>0.5021551489389007 0.5021551489389007 0.5021551489389007</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_131</name>
+      <pose>24.92769031124687 -10.170392122130782 1.6069552936137408 0 0 5.827303753061588</pose>
+      <scale>0.37489282808071617 0.37489282808071617 0.37489282808071617</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_132</name>
+      <pose>-10.409085344160559 11.210584582136242 3.8195365086106143 0 0 5.822140915428833</pose>
+      <scale>0.5601686125603833 0.5601686125603833 0.5601686125603833</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_133</name>
+      <pose>-24.793676203094545 23.524653569103712 5.00314824889605 0 0 5.208940612268271</pose>
+      <scale>0.3138107051741089 0.3138107051741089 0.3138107051741089</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_134</name>
+      <pose>-23.104525221183437 -18.792817347942727 2.2272917581156024 0 0 0.468379428246523</pose>
+      <scale>0.21009644944183378 0.21009644944183378 0.21009644944183378</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_135</name>
+      <pose>1.4162234189657994 15.609761752065396 3.8484273347455846 0 0 1.3103381245248682</pose>
+      <scale>0.4573771666239788 0.4573771666239788 0.4573771666239788</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_136</name>
+      <pose>-6.206319230463283 16.967155123320296 4.132167889124806 0 0 5.010493645093074</pose>
+      <scale>0.3118506243426479 0.3118506243426479 0.3118506243426479</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_137</name>
+      <pose>15.62677546169241 4.874280842397315 3.022674486024405 0 0 0.8355409722200441</pose>
+      <scale>0.4764418877238759 0.4764418877238759 0.4764418877238759</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_138</name>
+      <pose>-23.849162529868742 2.6945148054864774 3.8217928384770055 0 0 6.03770708565804</pose>
+      <scale>0.3596563502435803 0.3596563502435803 0.3596563502435803</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_139</name>
+      <pose>-5.338016677583131 9.591245528598478 3.5341808555889984 0 0 3.5623190810889165</pose>
+      <scale>0.5724779541021339 0.5724779541021339 0.5724779541021339</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_140</name>
+      <pose>19.442508597524814 -14.614935874584724 1.266387835574393 0 0 1.208978757126578</pose>
+      <scale>0.4975454265213697 0.4975454265213697 0.4975454265213697</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_141</name>
+      <pose>-4.576304113979241 -14.427815581429325 1.8874573552787457 0 0 2.7164640288165294</pose>
+      <scale>0.4975801464507289 0.4975801464507289 0.4975801464507289</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_142</name>
+      <pose>0.10883878470685815 -0.06551427374028762 2.6578584792165056 0 0 4.913657784561997</pose>
+      <scale>0.5066769666032535 0.5066769666032535 0.5066769666032535</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_143</name>
+      <pose>-8.334953117833173 15.462691160243011 4.013640413356884 0 0 5.609107387146085</pose>
+      <scale>0.44441539780512596 0.44441539780512596 0.44441539780512596</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_144</name>
+      <pose>-19.08006511912957 3.798697113683783 3.639418755716025 0 0 6.022034227515164</pose>
+      <scale>0.4906161249140173 0.4906161249140173 0.4906161249140173</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_145</name>
+      <pose>-17.54092940928201 23.99308945450224 4.848902671721256 0 0 3.2710462043831408</pose>
+      <scale>0.5303162650764686 0.5303162650764686 0.5303162650764686</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_146</name>
+      <pose>-11.88411245619543 21.240177184051532 4.495014710631665 0 0 5.8661993699637875</pose>
+      <scale>0.20238134021030613 0.20238134021030613 0.20238134021030613</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_147</name>
+      <pose>-8.944264465725887 17.970577240267588 4.206326890050876 0 0 1.689450264951016</pose>
+      <scale>0.3118160469479362 0.3118160469479362 0.3118160469479362</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_148</name>
+      <pose>19.836825291325113 -23.026773573041474 0.46181828142966597 0 0 2.9584458989572355</pose>
+      <scale>0.2952642890866808 0.2952642890866808 0.2952642890866808</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_149</name>
+      <pose>7.823096089872038 -5.264323254622443 2.422329161649072 0 0 4.24499495115967</pose>
+      <scale>0.2145978680690094 0.2145978680690094 0.2145978680690094</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_150</name>
+      <pose>-19.6587649826926 19.375602653617598 4.621962237917592 0 0 0.7055983589450691</pose>
+      <scale>0.34969393041809965 0.34969393041809965 0.34969393041809965</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_151</name>
+      <pose>-4.012689755269786 -24.34636482341374 0.7119091832218282 0 0 0.7923493885735924</pose>
+      <scale>0.24519616579076647 0.24519616579076647 0.24519616579076647</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_152</name>
+      <pose>5.73136317611209 -4.360940144487877 2.4219266899053555 0 0 1.1026091281392074</pose>
+      <scale>0.5512512338238551 0.5512512338238551 0.5512512338238551</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_153</name>
+      <pose>17.91776739793658 -24.18033786283372 0.4896101132577768 0 0 3.319703643833748</pose>
+      <scale>0.3906908791227492 0.3906908791227492 0.3906908791227492</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_154</name>
+      <pose>1.2279182163639533 6.693435482760208 3.2407995100485643 0 0 3.2537121334966894</pose>
+      <scale>0.25478929873584993 0.25478929873584993 0.25478929873584993</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_155</name>
+      <pose>-0.9729143921561096 10.528205302063348 3.460622591499744 0 0 2.341644040520584</pose>
+      <scale>0.2987689207694757 0.2987689207694757 0.2987689207694757</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_156</name>
+      <pose>-22.56526751888287 12.123608563581435 4.343155922148589 0 0 4.08974408907547</pose>
+      <scale>0.5635611748475837 0.5635611748475837 0.5635611748475837</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_157</name>
+      <pose>7.058561433732429 -18.92080298668035 1.1373036474325382 0 0 3.4896564245472304</pose>
+      <scale>0.45769656483719406 0.45769656483719406 0.45769656483719406</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_158</name>
+      <pose>10.54279983964387 -21.580791420000107 1.020357644397026 0 0 5.575838760203078</pose>
+      <scale>0.46101322056752964 0.46101322056752964 0.46101322056752964</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_159</name>
+      <pose>23.603149100127332 -20.55316401869967 0.44283420977439164 0 0 0.6750542746291144</pose>
+      <scale>0.5867739471247555 0.5867739471247555 0.5867739471247555</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_160</name>
+      <pose>9.630955834328098 -5.852574945809575 2.4315661211037516 0 0 2.1150858117500344</pose>
+      <scale>0.3137570238287778 0.3137570238287778 0.3137570238287778</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_161</name>
+      <pose>23.113591331960848 -21.823672127619282 0.3256944504684956 0 0 1.0750711750362978</pose>
+      <scale>0.4359752225342105 0.4359752225342105 0.4359752225342105</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_162</name>
+      <pose>21.2928284086219 -18.45013885248706 0.7767598967585475 0 0 6.2736761905791445</pose>
+      <scale>0.5549298148956252 0.5549298148956252 0.5549298148956252</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_163</name>
+      <pose>-1.4152271744962768 14.635488573469544 3.792033745512989 0 0 6.161565556366527</pose>
+      <scale>0.5639268276185314 0.5639268276185314 0.5639268276185314</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_164</name>
+      <pose>7.6856780699303044 10.505154030016264 3.4762482366529857 0 0 0.786554667179799</pose>
+      <scale>0.23419804256457033 0.23419804256457033 0.23419804256457033</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_165</name>
+      <pose>-24.400032580919824 4.772621773083699 3.9912712806690953 0 0 4.770199494580835</pose>
+      <scale>0.3435095082237306 0.3435095082237306 0.3435095082237306</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_166</name>
+      <pose>23.94715351420357 -12.319491680231833 1.4100049151525302 0 0 0.015744530345777285</pose>
+      <scale>0.37386290420654084 0.37386290420654084 0.37386290420654084</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_167</name>
+      <pose>6.205403104195359 7.543185675920405 3.290804684127333 0 0 1.4395019893783103</pose>
+      <scale>0.2658348714963766 0.2658348714963766 0.2658348714963766</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_168</name>
+      <pose>6.504562146213871 10.964564457788143 3.5658840057329586 0 0 0.13654440108176477</pose>
+      <scale>0.4443762259403505 0.4443762259403505 0.4443762259403505</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_169</name>
+      <pose>14.885916306058576 -7.549667171744069 2.15592759523937 0 0 0.3558821346783857</pose>
+      <scale>0.5033436065939152 0.5033436065939152 0.5033436065939152</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_170</name>
+      <pose>16.877030514201856 -10.458880650870174 1.820758500312552 0 0 2.65487368101621</pose>
+      <scale>0.4667987436129519 0.4667987436129519 0.4667987436129519</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_171</name>
+      <pose>-4.814522317816973 -4.825585653583843 2.592677574101746 0 0 3.2166536091664026</pose>
+      <scale>0.44553997515282007 0.44553997515282007 0.44553997515282007</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_172</name>
+      <pose>-24.20557782877276 -21.66787976839428 2.110028692047108 0 0 5.022825633466834</pose>
+      <scale>0.20550642482392512 0.20550642482392512 0.20550642482392512</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_173</name>
+      <pose>19.46357975710397 2.3050126037792893 2.707885221843049 0 0 4.112635386427591</pose>
+      <scale>0.31049002738967146 0.31049002738967146 0.31049002738967146</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_174</name>
+      <pose>14.753581141153688 -13.804300075972426 1.6531825057707321 0 0 2.7774298724514983</pose>
+      <scale>0.2739837963215224 0.2739837963215224 0.2739837963215224</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_175</name>
+      <pose>-12.914668721241492 17.14550482685813 4.254734875460182 0 0 1.0562162005507632</pose>
+      <scale>0.2445353510294143 0.2445353510294143 0.2445353510294143</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_176</name>
+      <pose>17.91253370005696 6.700423679885571 3.081399700936301 0 0 0.20474500395516837</pose>
+      <scale>0.22673386201505072 0.22673386201505072 0.22673386201505072</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_177</name>
+      <pose>15.611736852010239 6.340752737497638 3.070677893558052 0 0 2.76409519073715</pose>
+      <scale>0.5681362890517649 0.5681362890517649 0.5681362890517649</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_178</name>
+      <pose>-1.9176116664134177 16.82508057607658 4.005946715283982 0 0 4.946199386266979</pose>
+      <scale>0.4214272750828746 0.4214272750828746 0.4214272750828746</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_179</name>
+      <pose>10.294776579557784 -6.004383755433373 2.4445134925470082 0 0 4.3037952215841715</pose>
+      <scale>0.2522471323575775 0.2522471323575775 0.2522471323575775</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_180</name>
+      <pose>-14.825999632644951 15.088100399968532 4.245656064434884 0 0 2.535397415768002</pose>
+      <scale>0.4475142006410426 0.4475142006410426 0.4475142006410426</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_181</name>
+      <pose>-21.481440072259076 14.05283517017714 4.472553280201611 0 0 3.955455693069021</pose>
+      <scale>0.29747528819954167 0.29747528819954167 0.29747528819954167</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_182</name>
+      <pose>4.31357578397056 7.953801088105571 3.3094337305797756 0 0 6.078415139834885</pose>
+      <scale>0.5071368085109895 0.5071368085109895 0.5071368085109895</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_183</name>
+      <pose>-14.186449723174656 -9.854964059720936 2.551756999725694 0 0 0.6236681327424793</pose>
+      <scale>0.3365378269699705 0.3365378269699705 0.3365378269699705</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_184</name>
+      <pose>-11.530874109438725 13.754770082982922 3.9797674768383455 0 0 5.607282175263719</pose>
+      <scale>0.553456955889601 0.553456955889601 0.553456955889601</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_185</name>
+      <pose>-24.169790079243388 -10.985588634366119 2.94446785501851 0 0 4.311513783639041</pose>
+      <scale>0.27101665000585695 0.27101665000585695 0.27101665000585695</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_186</name>
+      <pose>-12.639084856850529 -12.616303049091194 2.2808288372870336 0 0 0.5144599647633891</pose>
+      <scale>0.4583002104078442 0.4583002104078442 0.4583002104078442</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_187</name>
+      <pose>-2.690753522971047 -12.17754965203175 1.937539190006599 0 0 2.4519054382239456</pose>
+      <scale>0.3291053060044685 0.3291053060044685 0.3291053060044685</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_188</name>
+      <pose>-11.962121478391298 0.8178083722677876 3.166942010590561 0 0 3.1220883575066627</pose>
+      <scale>0.3232126123101976 0.3232126123101976 0.3232126123101976</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_189</name>
+      <pose>-2.062238948270384 -14.037145533079055 1.7994500108917437 0 0 0.7424749628444401</pose>
+      <scale>0.5617353204124944 0.5617353204124944 0.5617353204124944</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_190</name>
+      <pose>-24.394218877919048 -24.830000116284147 1.9330326927373205 0 0 4.777877366015529</pose>
+      <scale>0.3203858927387805 0.3203858927387805 0.3203858927387805</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_191</name>
+      <pose>1.9353620184562317 -12.746986741207458 1.702490203689656 0 0 5.967613124485542</pose>
+      <scale>0.33438397256749963 0.33438397256749963 0.33438397256749963</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_192</name>
+      <pose>-3.8915421083518673 -0.6765727483760742 2.7345086654624713 0 0 4.706253957764249</pose>
+      <scale>0.28621747617082705 0.28621747617082705 0.28621747617082705</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_193</name>
+      <pose>13.353619921762188 11.10448918396365 3.498914786541741 0 0 0.46126653171778176</pose>
+      <scale>0.5906757558813918 0.5906757558813918 0.5906757558813918</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_194</name>
+      <pose>-12.323285461958783 -22.19213938891217 1.193506291313129 0 0 4.9957590521651705</pose>
+      <scale>0.23075009396920398 0.23075009396920398 0.23075009396920398</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_195</name>
+      <pose>6.953111962013686 23.586263183616737 4.509429087135234 0 0 4.170655150867172</pose>
+      <scale>0.3440343285578692 0.3440343285578692 0.3440343285578692</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_196</name>
+      <pose>-5.497427286197162 5.058729028271447 3.1815389367825726 0 0 1.0508498027453657</pose>
+      <scale>0.5483003196085887 0.5483003196085887 0.5483003196085887</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_197</name>
+      <pose>-5.922476567097469 -6.013547340861123 2.5988542095563028 0 0 0.08343128917912736</pose>
+      <scale>0.2802656291434792 0.2802656291434792 0.2802656291434792</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_198</name>
+      <pose>1.8505217460485746 19.040943060661874 4.191612112886206 0 0 4.453975057110695</pose>
+      <scale>0.3183201497631475 0.3183201497631475 0.3183201497631475</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_199</name>
+      <pose>14.836615028034679 -22.144253339520493 0.8964839890407799 0 0 2.2395141468079465</pose>
+      <scale>0.45030321722320227 0.45030321722320227 0.45030321722320227</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_200</name>
+      <pose>-15.57639009195888 -22.881991315763152 1.3019427579977727 0 0 1.7375342449448397</pose>
+      <scale>0.3213800870885963 0.3213800870885963 0.3213800870885963</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_201</name>
+      <pose>-23.59752888989574 21.724732479298915 4.885838314188758 0 0 5.929535795038844</pose>
+      <scale>0.5384874683720875 0.5384874683720875 0.5384874683720875</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_202</name>
+      <pose>-0.6135294555151987 15.904501175567901 3.9533551084477976 0 0 3.212530816830702</pose>
+      <scale>0.3483742633502865 0.3483742633502865 0.3483742633502865</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_203</name>
+      <pose>-13.99500377853418 -24.586204249847007 1.0183362585228595 0 0 2.2279541571077544</pose>
+      <scale>0.29613653411049845 0.29613653411049845 0.29613653411049845</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_204</name>
+      <pose>-8.325729629908743 -17.38260408756334 1.6052354367541293 0 0 3.3439437040672355</pose>
+      <scale>0.24730491438718 0.24730491438718 0.24730491438718</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_205</name>
+      <pose>-3.6023656720128443 -10.829561462801488 2.0925286474061053 0 0 5.279405069065077</pose>
+      <scale>0.2589720248375021 0.2589720248375021 0.2589720248375021</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_206</name>
+      <pose>-22.413425837934778 -2.230835338677739 3.454576205886063 0 0 1.3550553285963596</pose>
+      <scale>0.585323702654482 0.585323702654482 0.585323702654482</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_207</name>
+      <pose>-17.395760416598645 2.323918945953398 3.54961680654735 0 0 4.975687604338041</pose>
+      <scale>0.4027358446709409 0.4027358446709409 0.4027358446709409</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_208</name>
+      <pose>6.6135005592825955 13.087772046671226 3.734864331725082 0 0 5.955775785363883</pose>
+      <scale>0.34627505169143113 0.34627505169143113 0.34627505169143113</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_209</name>
+      <pose>1.4158236737532945 0.12570845771267258 2.6696091925002237 0 0 0.6704101352810363</pose>
+      <scale>0.48770682914610247 0.48770682914610247 0.48770682914610247</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_210</name>
+      <pose>12.567647160957435 4.040227647348271 3.0886960340832452 0 0 5.709111713112323</pose>
+      <scale>0.3612818115812231 0.3612818115812231 0.3612818115812231</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_211</name>
+      <pose>17.34200594262233 -5.606158780506661 2.201921406373882 0 0 5.362320318520903</pose>
+      <scale>0.31551601325363804 0.31551601325363804 0.31551601325363804</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_212</name>
+      <pose>-14.42983689099328 -19.488165564266453 1.5620081013793934 0 0 1.2643233131647729</pose>
+      <scale>0.27338880343480404 0.27338880343480404 0.27338880343480404</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_213</name>
+      <pose>5.515264693437878 -24.142872949388806 0.5081792977569058 0 0 3.9936837615487506</pose>
+      <scale>0.38329626777377696 0.38329626777377696 0.38329626777377696</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_214</name>
+      <pose>-9.593297674991693 -6.278670311939688 2.6465356523412233 0 0 2.6601445402848563</pose>
+      <scale>0.22101995811529732 0.22101995811529732 0.22101995811529732</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_215</name>
+      <pose>20.36338512919332 -5.794890860196002 1.9877924487497187 0 0 2.9570890423318867</pose>
+      <scale>0.5941742197060657 0.5941742197060657 0.5941742197060657</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_216</name>
+      <pose>14.960162818207095 21.954716187527126 4.211622187227011 0 0 5.51183678779416</pose>
+      <scale>0.36670880975564696 0.36670880975564696 0.36670880975564696</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_217</name>
+      <pose>3.948251922634654 -3.733393472616129 2.394563902985134 0 0 1.4761459528332126</pose>
+      <scale>0.4198417597398449 0.4198417597398449 0.4198417597398449</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_218</name>
+      <pose>2.0051664338707837 -10.023994957730732 1.8270101626832818 0 0 5.8285617372681795</pose>
+      <scale>0.26189954833994245 0.26189954833994245 0.26189954833994245</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_219</name>
+      <pose>-20.913795330233697 -6.41232881215975 3.130102419280161 0 0 5.470733241516138</pose>
+      <scale>0.5898954144065418 0.5898954144065418 0.5898954144065418</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_220</name>
+      <pose>-1.3387230105440295 -10.900637058201852 1.9617260662873726 0 0 0.11465242177629352</pose>
+      <scale>0.41851049727622675 0.41851049727622675 0.41851049727622675</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_221</name>
+      <pose>-17.54714919215971 16.179046384131617 4.418733791982606 0 0 2.5354111298751656</pose>
+      <scale>0.24925813279170017 0.24925813279170017 0.24925813279170017</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_222</name>
+      <pose>0.07678636761811575 -14.45012336510254 1.6548857654561977 0 0 0.12539601330393996</pose>
+      <scale>0.4458992538996156 0.4458992538996156 0.4458992538996156</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_223</name>
+      <pose>-18.663878400709827 18.425793044037135 4.603359402739244 0 0 2.400932784515669</pose>
+      <scale>0.22583646551979927 0.22583646551979927 0.22583646551979927</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_224</name>
+      <pose>-8.413421168753693 1.9340640534591778 3.1209216785011367 0 0 3.2996457441917646</pose>
+      <scale>0.33018644722638374 0.33018644722638374 0.33018644722638374</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_225</name>
+      <pose>10.115577145106755 -20.893772922556952 1.0123853369728175 0 0 5.5416691918034315</pose>
+      <scale>0.39798833897973773 0.39798833897973773 0.39798833897973773</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_226</name>
+      <pose>21.38513539225596 20.581396905323125 4.035880781227933 0 0 5.696936512836365</pose>
+      <scale>0.24897453445506598 0.24897453445506598 0.24897453445506598</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_227</name>
+      <pose>-15.50378043593975 6.142949966317413 3.7027590123519594 0 0 2.8671370791966533</pose>
+      <scale>0.44695935055029856 0.44695935055029856 0.44695935055029856</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_228</name>
+      <pose>8.564483772774217 1.7101863386331253 2.9043039389705303 0 0 1.108319200582773</pose>
+      <scale>0.5729397890141044 0.5729397890141044 0.5729397890141044</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_229</name>
+      <pose>20.611984133931315 -16.842573344877064 1.0026216566361088 0 0 6.191796058091367</pose>
+      <scale>0.5348857867992087 0.5348857867992087 0.5348857867992087</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_230</name>
+      <pose>-15.067429404073975 -9.332017839737546 2.639584576672664 0 0 4.470507438945725</pose>
+      <scale>0.23303107799637957 0.23303107799637957 0.23303107799637957</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_231</name>
+      <pose>-24.844415277832365 18.35373111402098 4.718173485564817 0 0 3.624973684213047</pose>
+      <scale>0.5415659670976989 0.5415659670976989 0.5415659670976989</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_232</name>
+      <pose>-12.437575429018638 -14.82743209061553 1.985832905929464 0 0 3.9168439547409637</pose>
+      <scale>0.3218320412767219 0.3218320412767219 0.3218320412767219</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_233</name>
+      <pose>7.1845633761897005 22.24716093679787 4.439500313232314 0 0 6.1954169241915</pose>
+      <scale>0.5562784138081314 0.5562784138081314 0.5562784138081314</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_234</name>
+      <pose>-5.996442527125083 -10.13603422527806 2.278860617580283 0 0 6.011135086188448</pose>
+      <scale>0.29337280765123613 0.29337280765123613 0.29337280765123613</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_235</name>
+      <pose>19.710410399323017 4.773732313722682 2.840848992659479 0 0 2.113026251291757</pose>
+      <scale>0.5594011270811166 0.5594011270811166 0.5594011270811166</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_236</name>
+      <pose>-15.726108388467615 -10.41831603229891 2.576256645282175 0 0 4.904814053940616</pose>
+      <scale>0.3806043667267547 0.3806043667267547 0.3806043667267547</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_237</name>
+      <pose>3.703057584315669 5.6552683633331995 3.1648618794791594 0 0 6.069822176953735</pose>
+      <scale>0.4776099300807222 0.4776099300807222 0.4776099300807222</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_238</name>
+      <pose>-10.612857354584639 6.005081491859862 3.506491963460884 0 0 3.9586137899625395</pose>
+      <scale>0.553774534571057 0.553774534571057 0.553774534571057</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_239</name>
+      <pose>14.46568045674519 24.721749834150195 4.4058366542628224 0 0 0.15998442573906502</pose>
+      <scale>0.44941034454491174 0.44941034454491174 0.44941034454491174</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_240</name>
+      <pose>5.948836545145724 15.274499546416202 3.884334946520562 0 0 5.227297179748003</pose>
+      <scale>0.5099511290629939 0.5099511290629939 0.5099511290629939</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_241</name>
+      <pose>13.899078030881512 -10.9420556284372 1.9100509616081642 0 0 0.20326002805761723</pose>
+      <scale>0.29797494341210157 0.29797494341210157 0.29797494341210157</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_242</name>
+      <pose>-21.530046901386164 7.148026143043225 4.078564605217238 0 0 2.456888063616845</pose>
+      <scale>0.4160162349381375 0.4160162349381375 0.4160162349381375</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_243</name>
+      <pose>-17.575607902064316 17.414588731809864 4.517333943936786 0 0 5.477743123031899</pose>
+      <scale>0.5126830851461497 0.5126830851461497 0.5126830851461497</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_244</name>
+      <pose>-19.448655333222913 -8.477102826577866 2.9250261153377344 0 0 4.205264054181412</pose>
+      <scale>0.3813333235904577 0.3813333235904577 0.3813333235904577</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_245</name>
+      <pose>11.97692911782142 8.316983743555305 3.317915696154609 0 0 5.8401058531969285</pose>
+      <scale>0.5559830016181451 0.5559830016181451 0.5559830016181451</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_246</name>
+      <pose>22.44962088072122 -25.01470487075557 0.02180140987358946 0 0 0.7815941729160498</pose>
+      <scale>0.43893553946198577 0.43893553946198577 0.43893553946198577</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_247</name>
+      <pose>-6.669057663825505 -13.626132503442715 1.9568196671362497 0 0 3.2383928027208815</pose>
+      <scale>0.5210218352921623 0.5210218352921623 0.5210218352921623</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_248</name>
+      <pose>17.387495595617672 -8.729626220221789 1.895652247043064 0 0 6.006985705665204</pose>
+      <scale>0.3470845882513912 0.3470845882513912 0.3470845882513912</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_249</name>
+      <pose>7.896625902545935 -6.720931441422394 2.2500021962855614 0 0 5.536732632797784</pose>
+      <scale>0.28815250660056324 0.28815250660056324 0.28815250660056324</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_250</name>
+      <pose>-15.455087564507318 -19.916507891703656 1.6546161187624218 0 0 0.6941138763047316</pose>
+      <scale>0.5622112274464208 0.5622112274464208 0.5622112274464208</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_251</name>
+      <pose>-6.579146854900802 -11.347746067637956 2.1608554672417015 0 0 5.3226193548772125</pose>
+      <scale>0.31278197008852976 0.31278197008852976 0.31278197008852976</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_252</name>
+      <pose>18.421793774733544 -8.795058004044012 1.8392812755441659 0 0 6.020177875739907</pose>
+      <scale>0.5089400604367614 0.5089400604367614 0.5089400604367614</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_253</name>
+      <pose>-13.78707756323756 -2.9607112266856284 2.9458827414017654 0 0 4.548545535384982</pose>
+      <scale>0.33169047374439253 0.33169047374439253 0.33169047374439253</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_254</name>
+      <pose>14.86877611969603 3.7401923513478366 2.9437368882910966 0 0 4.239527473532878</pose>
+      <scale>0.5500629264426546 0.5500629264426546 0.5500629264426546</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_255</name>
+      <pose>24.553724973186455 8.11450399254035 3.0898885547923864 0 0 2.7624035826289943</pose>
+      <scale>0.5610164977131771 0.5610164977131771 0.5610164977131771</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_256</name>
+      <pose>-5.781740212760646 -8.384900801695132 2.405088554096316 0 0 0.028423926515551513</pose>
+      <scale>0.5518309569247619 0.5518309569247619 0.5518309569247619</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_257</name>
+      <pose>-12.06656546805993 -3.7966475627514242 2.922051440892417 0 0 4.047695378870645</pose>
+      <scale>0.3845177563231167 0.3845177563231167 0.3845177563231167</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_258</name>
+      <pose>-16.62384204627479 -3.8613044465255797 3.0605606152491167 0 0 4.224078713883821</pose>
+      <scale>0.43366859246827477 0.43366859246827477 0.43366859246827477</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_259</name>
+      <pose>-13.409010816197595 -6.758642775238936 2.7085668547624673 0 0 2.5783509953142283</pose>
+      <scale>0.5559125822101398 0.5559125822101398 0.5559125822101398</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_260</name>
+      <pose>20.03355947695858 -21.647623117598332 0.5452531990956628 0 0 1.2812338232949199</pose>
+      <scale>0.25411746053896694 0.25411746053896694 0.25411746053896694</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_261</name>
+      <pose>-11.597121709295902 -16.33080991114653 1.8639052554642561 0 0 6.236022037669501</pose>
+      <scale>0.5499985028129324 0.5499985028129324 0.5499985028129324</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_262</name>
+      <pose>-2.900626993796653 -15.695809387560322 1.7045466708692683 0 0 1.539838515675238</pose>
+      <scale>0.37292555726192966 0.37292555726192966 0.37292555726192966</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_263</name>
+      <pose>-1.635821275758456 2.888489431932509 2.9065992529908606 0 0 4.933015417409405</pose>
+      <scale>0.20293551167809493 0.20293551167809493 0.20293551167809493</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_264</name>
+      <pose>23.34308323100909 19.064564701899748 3.9582911663214175 0 0 2.592533318483415</pose>
+      <scale>0.3589879057621396 0.3589879057621396 0.3589879057621396</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_265</name>
+      <pose>-1.1329749694143878 13.063705254079998 3.7097957844829788 0 0 5.897139889933119</pose>
+      <scale>0.20177505017957748 0.20177505017957748 0.20177505017957748</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_266</name>
+      <pose>-12.060359379282744 8.322630227486357 3.7106809640136404 0 0 0.40910943422516055</pose>
+      <scale>0.2699740734791257 0.2699740734791257 0.2699740734791257</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_267</name>
+      <pose>20.37232297648218 -10.827435594889854 1.6068626486101898 0 0 6.199610144512873</pose>
+      <scale>0.5340275004637949 0.5340275004637949 0.5340275004637949</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_268</name>
+      <pose>19.8210710302843 -24.206936344222807 0.3535837834811285 0 0 2.556858876351285</pose>
+      <scale>0.45644283655915496 0.45644283655915496 0.45644283655915496</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_269</name>
+      <pose>8.782297604992067 -3.33389382807254 2.6064363050450754 0 0 0.21428295217257376</pose>
+      <scale>0.40079548564312295 0.40079548564312295 0.40079548564312295</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_270</name>
+      <pose>-13.819049335235814 19.639926445085464 4.491035071837432 0 0 5.73872640171492</pose>
+      <scale>0.2969056588966643 0.2969056588966643 0.2969056588966643</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_271</name>
+      <pose>-3.2762907682332596 -5.814153870142825 2.4169566672038725 0 0 6.1707577551214925</pose>
+      <scale>0.2860272432660256 0.2860272432660256 0.2860272432660256</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_272</name>
+      <pose>-6.431601068334206 -22.384792554938894 1.000485560133931 0 0 3.485480567248759</pose>
+      <scale>0.5970462431577861 0.5970462431577861 0.5970462431577861</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_273</name>
+      <pose>15.790543487287117 9.141039300916582 3.3362271550949076 0 0 3.9688482287511655</pose>
+      <scale>0.48787225353344243 0.48787225353344243 0.48787225353344243</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_274</name>
+      <pose>11.40127575842613 16.49529970949365 3.8836257932392773 0 0 4.928501920162801</pose>
+      <scale>0.36806674620042895 0.36806674620042895 0.36806674620042895</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_275</name>
+      <pose>7.097558724976004 14.446497674987064 3.7886429889889692 0 0 5.56266891855622</pose>
+      <scale>0.4526227517922406 0.4526227517922406 0.4526227517922406</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_276</name>
+      <pose>-1.8105814177491055 -24.105006682980143 0.656662385514468 0 0 5.850472560083185</pose>
+      <scale>0.2664136956036123 0.2664136956036123 0.2664136956036123</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_277</name>
+      <pose>18.893708169570665 -2.676331596607316 2.33574628715287 0 0 4.5377275431897806</pose>
+      <scale>0.5046604700454824 0.5046604700454824 0.5046604700454824</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_278</name>
+      <pose>6.697878803887431 8.513197097770657 3.344638884308722 0 0 2.15941670703645</pose>
+      <scale>0.32954622601803923 0.32954622601803923 0.32954622601803923</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_279</name>
+      <pose>3.0171621492203577 -18.86810971005857 1.0856546368667372 0 0 5.207056728623587</pose>
+      <scale>0.2455618212367206 0.2455618212367206 0.2455618212367206</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_280</name>
+      <pose>-0.23684804854332953 -23.77924251425879 0.647964865942696 0 0 5.067972814996917</pose>
+      <scale>0.44264724059894184 0.44264724059894184 0.44264724059894184</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_281</name>
+      <pose>19.335187490902584 -0.06916531782349722 2.4682184648495493 0 0 1.0190172311443364</pose>
+      <scale>0.3628166622185449 0.3628166622185449 0.3628166622185449</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_282</name>
+      <pose>-9.01396668457653 11.143887842235799 3.6912147380375417 0 0 5.2013497965821625</pose>
+      <scale>0.3475282744935615 0.3475282744935615 0.3475282744935615</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_283</name>
+      <pose>-0.4542199898856545 11.703321747799187 3.577295921010668 0 0 1.420609122906061</pose>
+      <scale>0.46580020144424844 0.46580020144424844 0.46580020144424844</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_284</name>
+      <pose>23.343958627159026 1.3372190618836832 2.5392796490292877 0 0 3.611269987013848</pose>
+      <scale>0.49926459756274993 0.49926459756274993 0.49926459756274993</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_285</name>
+      <pose>-5.283615805277989 -3.767561989373906 2.599658135494307 0 0 1.3889849500227305</pose>
+      <scale>0.58045533226621 0.58045533226621 0.58045533226621</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_286</name>
+      <pose>-11.464159873183496 9.031379665503302 3.737452761308393 0 0 2.5662839071114276</pose>
+      <scale>0.4104734861336843 0.4104734861336843 0.4104734861336843</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_287</name>
+      <pose>-14.839430998356157 -13.793375645031748 2.156500913993305 0 0 3.350156097802982</pose>
+      <scale>0.47192945858048346 0.47192945858048346 0.47192945858048346</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_288</name>
+      <pose>-9.34762154940008 -21.153469260138593 1.1501353614848584 0 0 3.874968866103665</pose>
+      <scale>0.5382644733620934 0.5382644733620934 0.5382644733620934</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_289</name>
+      <pose>10.622053291407518 -0.9378812396328051 2.805180210107456 0 0 0.3390440217046138</pose>
+      <scale>0.4915872261419454 0.4915872261419454 0.4915872261419454</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_290</name>
+      <pose>-8.971204421623852 8.310614759372449 3.603114473327018 0 0 4.768957019065668</pose>
+      <scale>0.562722118949843 0.562722118949843 0.562722118949843</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_291</name>
+      <pose>-19.920507564907375 -0.251765545570354 3.5280469346215124 0 0 1.253010543495833</pose>
+      <scale>0.48300587213445245 0.48300587213445245 0.48300587213445245</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_292</name>
+      <pose>8.971067599429993 -1.4157399524015268 2.693744325769636 0 0 6.103875116882768</pose>
+      <scale>0.572970042507712 0.572970042507712 0.572970042507712</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_293</name>
+      <pose>-23.178465403956423 -14.85355135745852 2.6806407734671653 0 0 3.7831833351331756</pose>
+      <scale>0.31641454393385937 0.31641454393385937 0.31641454393385937</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_294</name>
+      <pose>14.146107618668765 -15.51522693354248 1.5326014329717714 0 0 1.6489265346027187</pose>
+      <scale>0.35753807114236325 0.35753807114236325 0.35753807114236325</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_295</name>
+      <pose>0.24579291738740494 -7.559251713159679 2.142791981805143 0 0 5.919478070146928</pose>
+      <scale>0.5755590924163703 0.5755590924163703 0.5755590924163703</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_296</name>
+      <pose>1.0260921342108134 13.968185239320071 3.7967640962473066 0 0 2.5912838504913434</pose>
+      <scale>0.39855089995649695 0.39855089995649695 0.39855089995649695</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_297</name>
+      <pose>4.513209229230469 -11.029831751617069 1.7622368401560295 0 0 4.272512314649368</pose>
+      <scale>0.21452715684565887 0.21452715684565887 0.21452715684565887</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_298</name>
+      <pose>-23.65467783510804 10.730833858014826 4.35219944724606 0 0 2.406296530388999</pose>
+      <scale>0.3142220387257767 0.3142220387257767 0.3142220387257767</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_299</name>
+      <pose>-4.077095476412705 -5.668667647560561 2.5023222142122266 0 0 0.2060158812775081</pose>
+      <scale>0.2273152518373648 0.2273152518373648 0.2273152518373648</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_300</name>
+      <pose>18.723739063285215 -6.0371119678498 2.0176564455240955 0 0 5.907748818192687</pose>
+      <scale>0.5244544363164887 0.5244544363164887 0.5244544363164887</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_301</name>
+      <pose>-18.489742215031328 8.925395883545278 4.031361262903262 0 0 6.127737013137031</pose>
+      <scale>0.3898009209392289 0.3898009209392289 0.3898009209392289</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_302</name>
+      <pose>-4.478262425413163 15.84457504440482 3.9949463113967982 0 0 1.3542291710699679</pose>
+      <scale>0.35929811857218213 0.35929811857218213 0.35929811857218213</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_303</name>
+      <pose>12.099747382265576 6.863599214166605 3.221177381076006 0 0 1.2065535409126615</pose>
+      <scale>0.26382891787867385 0.26382891787867385 0.26382891787867385</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_304</name>
+      <pose>11.088893689800834 0.26052520163082704 2.880662898217163 0 0 0.5790947221761861</pose>
+      <scale>0.3072612653789435 0.3072612653789435 0.3072612653789435</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_305</name>
+      <pose>6.899101322496172 -25.118126596583167 0.5058267807752134 0 0 2.7156917534020453</pose>
+      <scale>0.46025356759498615 0.46025356759498615 0.46025356759498615</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_306</name>
+      <pose>1.7786433981590157 -17.72066990385437 1.2688522363199444 0 0 1.1351519839797526</pose>
+      <scale>0.37513495451792556 0.37513495451792556 0.37513495451792556</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_307</name>
+      <pose>-10.53887109385984 23.727917525327726 4.6525626754492455 0 0 4.098825706933338</pose>
+      <scale>0.5583263416531357 0.5583263416531357 0.5583263416531357</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_308</name>
+      <pose>-1.0070160775092099 17.914040490863165 4.118647485402362 0 0 4.069369439901226</pose>
+      <scale>0.3461871845073591 0.3461871845073591 0.3461871845073591</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_309</name>
+      <pose>-13.355902204094438 0.38764088123843976 3.201467224536274 0 0 4.054509588560007</pose>
+      <scale>0.409981900179196 0.409981900179196 0.409981900179196</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_310</name>
+      <pose>20.59895857715886 -4.141220525354932 2.153690452974367 0 0 5.76081066737998</pose>
+      <scale>0.23992364794641008 0.23992364794641008 0.23992364794641008</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_311</name>
+      <pose>10.65678184568258 -14.236445360018934 1.72181871499487 0 0 1.3319659680185745</pose>
+      <scale>0.33232006209388887 0.33232006209388887 0.33232006209388887</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_312</name>
+      <pose>-24.72168484692024 -0.052948688718363 3.7103093790404427 0 0 3.2390303226044574</pose>
+      <scale>0.43140425777564895 0.43140425777564895 0.43140425777564895</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_313</name>
+      <pose>16.76046297859505 -8.439613424259385 1.9557530620180275 0 0 5.934431037941293</pose>
+      <scale>0.513052211844079 0.513052211844079 0.513052211844079</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_314</name>
+      <pose>-8.984783597314536 5.033415899822099 3.3946651797418266 0 0 2.766440218557184</pose>
+      <scale>0.5695623898096905 0.5695623898096905 0.5695623898096905</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_315</name>
+      <pose>16.944158129583663 -22.70844425198952 0.6538320603734716 0 0 2.557336971093341</pose>
+      <scale>0.5040810090421348 0.5040810090421348 0.5040810090421348</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_316</name>
+      <pose>-11.057075918605864 -22.70442466281812 1.0714827100816284 0 0 4.575717026215736</pose>
+      <scale>0.4279026141735328 0.4279026141735328 0.4279026141735328</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_317</name>
+      <pose>-7.495466020765697 5.971837872422398 3.3177478614568447 0 0 3.6188311737093852</pose>
+      <scale>0.4997656469805358 0.4997656469805358 0.4997656469805358</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_318</name>
+      <pose>-18.047404904670092 -12.072262698154855 2.5755465206124675 0 0 3.42554178925778</pose>
+      <scale>0.5459499503769525 0.5459499503769525 0.5459499503769525</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_319</name>
+      <pose>15.40612355847695 15.435738020466204 3.7138835778240966 0 0 1.4277281091146943</pose>
+      <scale>0.5212172540741304 0.5212172540741304 0.5212172540741304</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_320</name>
+      <pose>-15.932062397622335 -25.116335250392726 1.2043557855868852 0 0 4.389621725386613</pose>
+      <scale>0.5910921295006413 0.5910921295006413 0.5910921295006413</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_321</name>
+      <pose>-16.054008414869806 -11.430027676798517 2.4100405222725763 0 0 5.746394358716724</pose>
+      <scale>0.4653811421825224 0.4653811421825224 0.4653811421825224</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_322</name>
+      <pose>-18.96748160019407 -3.606228809678992 3.2296401042023555 0 0 2.806544203765765</pose>
+      <scale>0.4578182377712455 0.4578182377712455 0.4578182377712455</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_323</name>
+      <pose>-1.6468420708249916 5.134437991016995 3.070014472741751 0 0 2.513170142990642</pose>
+      <scale>0.44303606484193814 0.44303606484193814 0.44303606484193814</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_324</name>
+      <pose>7.147760474435003 -10.065263223502267 1.925443363682168 0 0 1.1765084809355875</pose>
+      <scale>0.5691816813660426 0.5691816813660426 0.5691816813660426</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_325</name>
+      <pose>-17.494404856689815 15.210084386616472 4.342034948984399 0 0 2.2898874317809246</pose>
+      <scale>0.5642264146531335 0.5642264146531335 0.5642264146531335</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_326</name>
+      <pose>-14.720336006439773 -8.065291934142717 2.6388710743613495 0 0 3.616201847901944</pose>
+      <scale>0.4478949925031185 0.4478949925031185 0.4478949925031185</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_327</name>
+      <pose>-18.849381603269084 2.8760962778105252 3.5693794937847416 0 0 2.025568609537667</pose>
+      <scale>0.5984059700120146 0.5984059700120146 0.5984059700120146</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_328</name>
+      <pose>-24.037864902739262 -24.42241164223898 1.917185303771182 0 0 4.677918381272384</pose>
+      <scale>0.35773822488624984 0.35773822488624984 0.35773822488624984</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_329</name>
+      <pose>-10.696257794456264 -12.398078073711563 2.152372825076482 0 0 2.0372200727171506</pose>
+      <scale>0.44370754821034697 0.44370754821034697 0.44370754821034697</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_330</name>
+      <pose>-8.900717040159705 20.814678135800044 4.422775691659069 0 0 4.229898403898582</pose>
+      <scale>0.3899609640739998 0.3899609640739998 0.3899609640739998</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_331</name>
+      <pose>1.707678952602592 16.436678327998052 3.9639322500328475 0 0 1.9666146931412727</pose>
+      <scale>0.24548019176769667 0.24548019176769667 0.24548019176769667</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_332</name>
+      <pose>-20.20020373741773 3.20316573292704 3.7477306910767267 0 0 0.47001239544992135</pose>
+      <scale>0.23870796200150132 0.23870796200150132 0.23870796200150132</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_333</name>
+      <pose>-3.837942804824195 14.222303862005887 3.7889028490805554 0 0 4.544171353285461</pose>
+      <scale>0.410446334986727 0.410446334986727 0.410446334986727</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_334</name>
+      <pose>17.597163766404663 18.594017658492398 3.9091223823679413 0 0 1.1725653870836792</pose>
+      <scale>0.20047598024066116 0.20047598024066116 0.20047598024066116</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_335</name>
+      <pose>20.473374978911203 23.45382245090793 4.292937612328679 0 0 4.083094481783101</pose>
+      <scale>0.46410124925345114 0.46410124925345114 0.46410124925345114</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_336</name>
+      <pose>-1.6802966519056817 -6.110349352952635 2.3076347864982507 0 0 1.8978742432257172</pose>
+      <scale>0.47241177920219324 0.47241177920219324 0.47241177920219324</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_337</name>
+      <pose>-16.527632327064715 5.551940489885187 3.723405573180563 0 0 3.997373486944475</pose>
+      <scale>0.25121913241601657 0.25121913241601657 0.25121913241601657</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_338</name>
+      <pose>7.525052321610993 -22.78009984973306 0.8161010935983534 0 0 0.07992958559137676</pose>
+      <scale>0.4517636033573334 0.4517636033573334 0.4517636033573334</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_339</name>
+      <pose>-14.184151810031292 -0.9264438171074758 3.1650636391001115 0 0 2.6405393968908615</pose>
+      <scale>0.30675481892378553 0.30675481892378553 0.30675481892378553</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_340</name>
+      <pose>-25.230565544514736 -4.733286847969762 3.404975964446551 0 0 1.473675089037839</pose>
+      <scale>0.3882295620546158 0.3882295620546158 0.3882295620546158</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_341</name>
+      <pose>18.15856249422061 7.814024247633483 3.117192174083366 0 0 4.620043348994059</pose>
+      <scale>0.5096981592909416 0.5096981592909416 0.5096981592909416</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_342</name>
+      <pose>8.073917182170867 3.650154856332996 3.1085774819723557 0 0 2.5476201377995418</pose>
+      <scale>0.4957940145548521 0.4957940145548521 0.4957940145548521</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_343</name>
+      <pose>-10.833466626517424 -2.7576481568670843 2.9742164323431752 0 0 4.699302109198609</pose>
+      <scale>0.28262066276961634 0.28262066276961634 0.28262066276961634</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_344</name>
+      <pose>-24.80834557612321 -19.870686917301832 2.2437205996973173 0 0 1.8081203362099967</pose>
+      <scale>0.3627085891325657 0.3627085891325657 0.3627085891325657</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_345</name>
+      <pose>18.99632586404683 16.91516618639723 3.731339657480728 0 0 6.263811373793717</pose>
+      <scale>0.49583104651520626 0.49583104651520626 0.49583104651520626</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_346</name>
+      <pose>12.742487975949203 -18.015677783315663 1.3758812102695557 0 0 2.818589091773184</pose>
+      <scale>0.26950292602220294 0.26950292602220294 0.26950292602220294</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_347</name>
+      <pose>-11.336445156388233 -9.994908224302367 2.4234457021943516 0 0 4.8201812016399215</pose>
+      <scale>0.39107805286188446 0.39107805286188446 0.39107805286188446</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_348</name>
+      <pose>-15.339426407851002 -16.833720916395773 1.942730762642352 0 0 3.355725378333175</pose>
+      <scale>0.2691951285380524 0.2691951285380524 0.2691951285380524</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_349</name>
+      <pose>6.8418356413335815 -6.026316304473134 2.2512424216505935 0 0 3.058579233608506</pose>
+      <scale>0.3921865844264304 0.3921865844264304 0.3921865844264304</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_350</name>
+      <pose>-9.010872876339196 6.586167153515174 3.432249000230286 0 0 4.158915829926568</pose>
+      <scale>0.4653617648485618 0.4653617648485618 0.4653617648485618</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_351</name>
+      <pose>3.094827449289639 20.65077540129039 4.3695077629095325 0 0 0.6986155065399844</pose>
+      <scale>0.5094353866854736 0.5094353866854736 0.5094353866854736</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_352</name>
+      <pose>-1.776585586823252 22.747205639155126 4.45604198410943 0 0 2.259461920436887</pose>
+      <scale>0.2625733898851993 0.2625733898851993 0.2625733898851993</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_353</name>
+      <pose>3.85065806326379 18.1720460571562 4.137192784627337 0 0 2.3710336555773637</pose>
+      <scale>0.44544223979085595 0.44544223979085595 0.44544223979085595</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_354</name>
+      <pose>-21.23700879650803 6.680851252088967 4.01909350979572 0 0 0.9816593064494131</pose>
+      <scale>0.5031431824134776 0.5031431824134776 0.5031431824134776</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_355</name>
+      <pose>-24.231028636960666 1.0854740109350374 3.8046975669131253 0 0 3.3167684476756305</pose>
+      <scale>0.4226858805609667 0.4226858805609667 0.4226858805609667</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_356</name>
+      <pose>2.445296951957676 3.410771375252189 2.9813369917609442 0 0 0.1870819467459072</pose>
+      <scale>0.529637460844757 0.529637460844757 0.529637460844757</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_357</name>
+      <pose>6.195150675520281 -9.054288794585016 1.9429504274039857 0 0 4.5724256435064055</pose>
+      <scale>0.2401963244237143 0.2401963244237143 0.2401963244237143</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_358</name>
+      <pose>-15.403051958538684 -24.28457712852444 1.2073479135843297 0 0 1.284527201923067</pose>
+      <scale>0.5196068541491945 0.5196068541491945 0.5196068541491945</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_359</name>
+      <pose>11.844642512677382 -23.92621061121534 0.8439296161925315 0 0 5.572434627885786</pose>
+      <scale>0.41758435371465147 0.41758435371465147 0.41758435371465147</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_360</name>
+      <pose>-10.586773611266224 -24.62378855884012 0.8870621366450124 0 0 1.0150381665455803</pose>
+      <scale>0.28727093016469973 0.28727093016469973 0.28727093016469973</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_361</name>
+      <pose>-18.27538564556159 -17.08282219852189 2.086797947303999 0 0 1.1545920312181202</pose>
+      <scale>0.38853899561941485 0.38853899561941485 0.38853899561941485</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_362</name>
+      <pose>-18.09517794501794 -16.149542370015148 2.1381806888469526 0 0 0.8182632437241528</pose>
+      <scale>0.5665310777658954 0.5665310777658954 0.5665310777658954</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_363</name>
+      <pose>-15.325437231209664 -17.62993232631356 1.841370565059777 0 0 3.0147243966583064</pose>
+      <scale>0.594083503631626 0.594083503631626 0.594083503631626</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_364</name>
+      <pose>16.27432834407051 17.624811007864878 3.8113060023471155 0 0 0.5805909588649121</pose>
+      <scale>0.42314378662794655 0.42314378662794655 0.42314378662794655</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_365</name>
+      <pose>23.975721979248085 -2.0828264909340426 2.231804414754408 0 0 1.0644191233401559</pose>
+      <scale>0.5318560498558812 0.5318560498558812 0.5318560498558812</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_366</name>
+      <pose>7.800980499764016 -3.417410403653683 2.487630682560217 0 0 2.463531209283812</pose>
+      <scale>0.45463467896398324 0.45463467896398324 0.45463467896398324</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_367</name>
+      <pose>4.687860786894824 -23.589080724028317 0.5664796890738536 0 0 5.839197773410777</pose>
+      <scale>0.5603027012025871 0.5603027012025871 0.5603027012025871</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_368</name>
+      <pose>-17.3264862794479 16.67313736681514 4.421611597244821 0 0 3.396499775784963</pose>
+      <scale>0.2516167749408277 0.2516167749408277 0.2516167749408277</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_369</name>
+      <pose>-13.681903435446696 21.802676603047466 4.56799232273016 0 0 1.0849402352658621</pose>
+      <scale>0.5425992166473743 0.5425992166473743 0.5425992166473743</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_370</name>
+      <pose>-24.61492524478712 8.312063575287581 4.185433346311169 0 0 1.6591600166305507</pose>
+      <scale>0.4040010420754285 0.4040010420754285 0.4040010420754285</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_371</name>
+      <pose>-21.020284605225882 -21.698380604123546 1.8246325713827725 0 0 4.000797364185132</pose>
+      <scale>0.2509511430982977 0.2509511430982977 0.2509511430982977</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_372</name>
+      <pose>-19.045177203149915 9.769488614002313 4.112334257696179 0 0 0.8501520482804176</pose>
+      <scale>0.5421828196539745 0.5421828196539745 0.5421828196539745</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_373</name>
+      <pose>18.61672310957225 -1.7055718754910458 2.419407931098666 0 0 0.9204729640597281</pose>
+      <scale>0.4492178281569176 0.4492178281569176 0.4492178281569176</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_374</name>
+      <pose>-15.661873567966271 19.54300224917111 4.536654558786129 0 0 0.3217482602432118</pose>
+      <scale>0.30638036986536143 0.30638036986536143 0.30638036986536143</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_375</name>
+      <pose>5.454824136631622 18.487769023018345 4.170668543289415 0 0 5.104123073083122</pose>
+      <scale>0.2879068628296831 0.2879068628296831 0.2879068628296831</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_376</name>
+      <pose>-23.072635915285957 20.52272072577611 4.869510421532371 0 0 2.7846195141096204</pose>
+      <scale>0.3783965586064253 0.3783965586064253 0.3783965586064253</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_377</name>
+      <pose>19.97696033436474 21.503518143973068 4.112133187734347 0 0 5.333602504321525</pose>
+      <scale>0.5071311603733755 0.5071311603733755 0.5071311603733755</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_378</name>
+      <pose>-10.843131601308384 19.36142213917845 4.343870746910469 0 0 4.195532427833237</pose>
+      <scale>0.47092384965993933 0.47092384965993933 0.47092384965993933</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_379</name>
+      <pose>-7.787578943761954 -4.539840768829613 2.756644076964304 0 0 0.06792194479226486</pose>
+      <scale>0.33628206450558557 0.33628206450558557 0.33628206450558557</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_380</name>
+      <pose>7.5227136732021975 -17.55942168618233 1.320070360837817 0 0 5.0862358063850985</pose>
+      <scale>0.4614061578656646 0.4614061578656646 0.4614061578656646</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_381</name>
+      <pose>20.89135181976438 22.536308146223604 4.232236854297445 0 0 5.484998607952882</pose>
+      <scale>0.42915988392638765 0.42915988392638765 0.42915988392638765</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_382</name>
+      <pose>19.683314158797565 20.01619857780632 4.017927702717746 0 0 2.157589223797262</pose>
+      <scale>0.36735184341362337 0.36735184341362337 0.36735184341362337</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_383</name>
+      <pose>0.41230783921444925 12.050975513876708 3.568745848277551 0 0 5.733664596905058</pose>
+      <scale>0.3360245110427622 0.3360245110427622 0.3360245110427622</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_384</name>
+      <pose>10.161834605359992 0.38721557177957777 2.8390301817481123 0 0 4.474214140000546</pose>
+      <scale>0.3918393302680018 0.3918393302680018 0.3918393302680018</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_385</name>
+      <pose>-24.93347030729009 4.2722512346019315 3.9846864429229707 0 0 1.4226655888805422</pose>
+      <scale>0.4530424699928328 0.4530424699928328 0.4530424699928328</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_386</name>
+      <pose>6.664789027639493 4.873369660960773 3.098850552075437 0 0 3.9683972808250956</pose>
+      <scale>0.22848283804649375 0.22848283804649375 0.22848283804649375</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_387</name>
+      <pose>-16.721250318544435 11.418498866990689 4.165194884866172 0 0 0.06348833686505087</pose>
+      <scale>0.4442394806967226 0.4442394806967226 0.4442394806967226</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_388</name>
+      <pose>15.86536911789802 0.5833032546400752 2.704789231547056 0 0 5.398040756386825</pose>
+      <scale>0.2991223485956617 0.2991223485956617 0.2991223485956617</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_389</name>
+      <pose>-11.658951047745862 18.20083628578663 4.280420917029212 0 0 6.167957593995675</pose>
+      <scale>0.3562415255664645 0.3562415255664645 0.3562415255664645</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_390</name>
+      <pose>10.888993697659231 -16.8745559812074 1.466022404713429 0 0 5.26919888743536</pose>
+      <scale>0.24057880463328254 0.24057880463328254 0.24057880463328254</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_391</name>
+      <pose>-20.04829043755012 -21.57638614188213 1.840548128364752 0 0 2.8856653926550537</pose>
+      <scale>0.4611855199165927 0.4611855199165927 0.4611855199165927</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_392</name>
+      <pose>-0.5705573800561972 -6.4349999513848495 2.2016482300691744 0 0 2.502758886007245</pose>
+      <scale>0.22930848887010236 0.22930848887010236 0.22930848887010236</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_393</name>
+      <pose>-9.966822753733796 15.388292891586822 4.032647248021907 0 0 1.6452984758503055</pose>
+      <scale>0.5004135504920779 0.5004135504920779 0.5004135504920779</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_394</name>
+      <pose>-3.5597610346425164 1.5940768280196558 2.8236767958324203 0 0 4.72758194855099</pose>
+      <scale>0.5280337133322108 0.5280337133322108 0.5280337133322108</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_395</name>
+      <pose>17.671704370732208 9.741198419029125 3.311828479621993 0 0 4.296654203217419</pose>
+      <scale>0.5498191416345605 0.5498191416345605 0.5498191416345605</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_396</name>
+      <pose>-15.522665938861682 10.426049996203908 4.035724552599442 0 0 6.1260630665602065</pose>
+      <scale>0.5559843572829073 0.5559843572829073 0.5559843572829073</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_397</name>
+      <pose>-11.072353606103487 -20.677189689914282 1.2917686320234028 0 0 2.2657405898344085</pose>
+      <scale>0.20475837794732155 0.20475837794732155 0.20475837794732155</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_398</name>
+      <pose>24.738066681147693 23.586722846741246 4.347852370220703 0 0 5.279841822652079</pose>
+      <scale>0.5455644847264953 0.5455644847264953 0.5455644847264953</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_399</name>
+      <pose>-21.50548809966512 -8.361605946118907 3.029396849168759 0 0 1.0409815293188167</pose>
+      <scale>0.3060892570060893 0.3060892570060893 0.3060892570060893</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_400</name>
+      <pose>-9.568066221015222 6.659454794058405 3.5569841275553675 0 0 5.765016071022017</pose>
+      <scale>0.3291433807043228 0.3291433807043228 0.3291433807043228</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_401</name>
+      <pose>18.930604585006215 7.102907196030628 3.0440823768471215 0 0 0.542051009816517</pose>
+      <scale>0.4303516866077056 0.4303516866077056 0.4303516866077056</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_402</name>
+      <pose>-2.9635670059337613 2.1823519884634024 2.8787578960166846 0 0 4.829648924305691</pose>
+      <scale>0.5488481614556155 0.5488481614556155 0.5488481614556155</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_403</name>
+      <pose>-4.93876316434741 -19.10474985537622 1.4369875059325508 0 0 5.806916341905009</pose>
+      <scale>0.4853989879374926 0.4853989879374926 0.4853989879374926</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_404</name>
+      <pose>-5.595816964089536 23.87620657967556 4.609240274793639 0 0 2.4535343149074427</pose>
+      <scale>0.5037219614066674 0.5037219614066674 0.5037219614066674</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_405</name>
+      <pose>-18.51132364817089 -0.9109503584708172 3.3229161252767594 0 0 0.9991608286976388</pose>
+      <scale>0.4406361955961641 0.4406361955961641 0.4406361955961641</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_406</name>
+      <pose>-18.556160259552698 -22.07155558429221 1.6247442496506774 0 0 4.8325771363058045</pose>
+      <scale>0.48184761157017514 0.48184761157017514 0.48184761157017514</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_407</name>
+      <pose>17.10376570241835 -21.105877161543027 0.8754101001669574 0 0 4.203572545972449</pose>
+      <scale>0.42980595413548073 0.42980595413548073 0.42980595413548073</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_408</name>
+      <pose>-4.7384740945381125 -18.411768946785365 1.4437888095114793 0 0 4.7293573627406795</pose>
+      <scale>0.2938559120401927 0.2938559120401927 0.2938559120401927</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_409</name>
+      <pose>-8.293004342924565 8.866934642713325 3.5648507633850146 0 0 0.7994229167988419</pose>
+      <scale>0.27362049736149974 0.27362049736149974 0.27362049736149974</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_410</name>
+      <pose>-5.912521146866482 -19.852116105348365 1.3937688553846492 0 0 1.6716896882314796</pose>
+      <scale>0.265362583553876 0.265362583553876 0.265362583553876</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_411</name>
+      <pose>-18.181464337006762 18.90459571635884 4.518388711351732 0 0 1.5009128104586822</pose>
+      <scale>0.37561978980612154 0.37561978980612154 0.37561978980612154</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_412</name>
+      <pose>-19.830824170770704 22.085683129365428 4.798590809586307 0 0 3.8757929655804375</pose>
+      <scale>0.3740347542169984 0.3740347542169984 0.3740347542169984</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_413</name>
+      <pose>22.39025263958593 -2.401827491191547 2.232054503592159 0 0 2.5809368330722626</pose>
+      <scale>0.28586984419572703 0.28586984419572703 0.28586984419572703</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_414</name>
+      <pose>-21.56540082411654 -3.001216347650818 3.378338323439104 0 0 4.021880003500832</pose>
+      <scale>0.41622962350811976 0.41622962350811976 0.41622962350811976</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_415</name>
+      <pose>-23.295424473249312 2.863953141407549 3.8542682885340414 0 0 2.448270141702062</pose>
+      <scale>0.498037001914408 0.498037001914408 0.498037001914408</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_416</name>
+      <pose>-22.98328438265151 11.511787020161925 4.384480578634589 0 0 1.9793729750989704</pose>
+      <scale>0.469944621888758 0.469944621888758 0.469944621888758</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_417</name>
+      <pose>8.178112437946801 -10.795944787911635 1.9299734699955915 0 0 4.70301319639796</pose>
+      <scale>0.32933344250982016 0.32933344250982016 0.32933344250982016</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_418</name>
+      <pose>19.8767898381045 17.773866579180776 3.789443882697458 0 0 1.6351028382386465</pose>
+      <scale>0.552672523868923 0.552672523868923 0.552672523868923</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_419</name>
+      <pose>-19.016966016497303 11.286484792286458 4.178750455971184 0 0 4.012560516263953</pose>
+      <scale>0.5696103835547079 0.5696103835547079 0.5696103835547079</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_420</name>
+      <pose>14.828024159045725 -16.008052203488752 1.5267210116135108 0 0 0.32418494566605194</pose>
+      <scale>0.26583029731681973 0.26583029731681973 0.26583029731681973</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_421</name>
+      <pose>-23.22668098760623 -20.144746177437522 2.1285570769830073 0 0 3.767409499220797</pose>
+      <scale>0.31866012787320713 0.31866012787320713 0.31866012787320713</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_422</name>
+      <pose>-21.760407516150472 18.303476236348374 4.644911481403308 0 0 1.8157597744159852</pose>
+      <scale>0.28401555181914895 0.28401555181914895 0.28401555181914895</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_423</name>
+      <pose>-0.09623949181207081 -24.695824267792403 0.4659917358798674 0 0 2.4583366643188738</pose>
+      <scale>0.20919802538188922 0.20919802538188922 0.20919802538188922</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_424</name>
+      <pose>-6.101972669451726 -10.764209499435315 2.1900364900671017 0 0 0.4887771872183073</pose>
+      <scale>0.3403871926577991 0.3403871926577991 0.3403871926577991</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_425</name>
+      <pose>-13.30571746190833 8.660115975683006 3.755756262726435 0 0 2.850355326066176</pose>
+      <scale>0.5566408133766315 0.5566408133766315 0.5566408133766315</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_426</name>
+      <pose>-4.87789637070664 -6.301100699510378 2.464739204660835 0 0 4.7812797657225214</pose>
+      <scale>0.5779211805957769 0.5779211805957769 0.5779211805957769</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_427</name>
+      <pose>-19.04493613480799 -17.8459777375022 2.0728689954555 0 0 0.27534661096744456</pose>
+      <scale>0.2941712190732352 0.2941712190732352 0.2941712190732352</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_428</name>
+      <pose>-5.299390697932882 6.12731844365932 3.3022829531832087 0 0 3.1482574134572254</pose>
+      <scale>0.4142836232136796 0.4142836232136796 0.4142836232136796</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_429</name>
+      <pose>5.570839019367675 4.851011203725971 3.082538609708729 0 0 2.377701731614489</pose>
+      <scale>0.4118583822599181 0.4118583822599181 0.4118583822599181</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_430</name>
+      <pose>19.568948317229577 -1.9466753544053432 2.352689841626371 0 0 2.456696990094048</pose>
+      <scale>0.37825884758788775 0.37825884758788775 0.37825884758788775</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_431</name>
+      <pose>19.647552011016472 -8.21433924686447 1.804405941883497 0 0 1.2088941197498755</pose>
+      <scale>0.33899121193502724 0.33899121193502724 0.33899121193502724</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_432</name>
+      <pose>22.137211253557133 -22.99853625079068 0.2461434683771943 0 0 3.260726077883643</pose>
+      <scale>0.2209889821781951 0.2209889821781951 0.2209889821781951</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_433</name>
+      <pose>4.39486891512254 24.6553043172579 4.591205154413233 0 0 0.4974946315034584</pose>
+      <scale>0.228299686108784 0.228299686108784 0.228299686108784</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_434</name>
+      <pose>-4.610063574669891 -17.577402352090935 1.581287851233223 0 0 0.24122940390443884</pose>
+      <scale>0.32635202848986056 0.32635202848986056 0.32635202848986056</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_435</name>
+      <pose>18.052164093204404 -0.5270545963636053 2.502334713225012 0 0 4.42419776601865</pose>
+      <scale>0.5992577252929566 0.5992577252929566 0.5992577252929566</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_436</name>
+      <pose>-3.7020928924723826 19.410321606024745 4.241318786857624 0 0 2.4854313965700774</pose>
+      <scale>0.39217719793431755 0.39217719793431755 0.39217719793431755</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_437</name>
+      <pose>21.62180653793333 -21.11265692910757 0.5679473286642683 0 0 1.9173688698116478</pose>
+      <scale>0.3130706534034165 0.3130706534034165 0.3130706534034165</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_438</name>
+      <pose>16.925021105220914 13.877076840097992 3.5545033378866404 0 0 3.6742976955603504</pose>
+      <scale>0.4909811438338206 0.4909811438338206 0.4909811438338206</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_439</name>
+      <pose>-23.310613289887325 1.0674117699632042 3.7168591968722176 0 0 1.8119074435232927</pose>
+      <scale>0.5928081611500295 0.5928081611500295 0.5928081611500295</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_440</name>
+      <pose>6.910896641704156 -4.3001658195349215 2.4164955627048 0 0 5.180785783099629</pose>
+      <scale>0.5012774405758247 0.5012774405758247 0.5012774405758247</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_441</name>
+      <pose>-9.172468759726971 -1.6921329130225438 2.9524081061660676 0 0 2.925236686598955</pose>
+      <scale>0.258775800842238 0.258775800842238 0.258775800842238</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_442</name>
+      <pose>-24.016018629082897 -13.162250688021322 2.785153834237042 0 0 5.691851402352362</pose>
+      <scale>0.27663835694901073 0.27663835694901073 0.27663835694901073</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_443</name>
+      <pose>11.120945300205896 13.975110430806573 3.7592876548814105 0 0 5.145330083808151</pose>
+      <scale>0.5340488053442283 0.5340488053442283 0.5340488053442283</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_444</name>
+      <pose>-7.940450637398044 -16.44108946333436 1.7085749366091663 0 0 0.5393646620037801</pose>
+      <scale>0.4732816491410854 0.4732816491410854 0.4732816491410854</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_445</name>
+      <pose>-14.971612966135847 17.776449476940222 4.413035718293061 0 0 2.615702768037638</pose>
+      <scale>0.3808976993946544 0.3808976993946544 0.3808976993946544</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_446</name>
+      <pose>6.66075507054466 0.9136489584849201 2.8069289554359917 0 0 4.1545843598832635</pose>
+      <scale>0.4875117390522959 0.4875117390522959 0.4875117390522959</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_447</name>
+      <pose>23.356838981417752 8.963832527723163 3.1686728637403982 0 0 5.595691790751526</pose>
+      <scale>0.20212134328044554 0.20212134328044554 0.20212134328044554</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_448</name>
+      <pose>-15.329649566696258 -15.433665225237007 2.027228031381634 0 0 4.215862017570254</pose>
+      <scale>0.396472075568825 0.396472075568825 0.396472075568825</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_449</name>
+      <pose>9.851997156968096 3.4288021997206073 3.126011951511093 0 0 2.154599539202291</pose>
+      <scale>0.23574756582282297 0.23574756582282297 0.23574756582282297</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_450</name>
+      <pose>18.505550121556887 0.4386936828475392 2.5424243874599513 0 0 3.7008238646358644</pose>
+      <scale>0.20013685324647806 0.20013685324647806 0.20013685324647806</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_451</name>
+      <pose>17.091178260063415 22.73132915738541 4.216525991214407 0 0 3.4369750120992726</pose>
+      <scale>0.28844065946503883 0.28844065946503883 0.28844065946503883</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_452</name>
+      <pose>13.610056010500571 -7.665753352214981 2.265074078299579 0 0 2.116012148016184</pose>
+      <scale>0.5527057389660255 0.5527057389660255 0.5527057389660255</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_453</name>
+      <pose>-21.13541059389364 7.71492884750068 4.057060257635516 0 0 4.121186682000975</pose>
+      <scale>0.535147071210551 0.535147071210551 0.535147071210551</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_454</name>
+      <pose>6.974113674996701 11.795993509160077 3.634376382366499 0 0 0.602037410201495</pose>
+      <scale>0.4171685088690077 0.4171685088690077 0.4171685088690077</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_455</name>
+      <pose>-21.4411936345362 -9.180123613690611 3.025815412289049 0 0 3.3484396383552686</pose>
+      <scale>0.5958901855668548 0.5958901855668548 0.5958901855668548</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_456</name>
+      <pose>-17.484603452869184 -7.739433436561562 2.8108653414208558 0 0 4.88969904456797</pose>
+      <scale>0.306549981272654 0.306549981272654 0.306549981272654</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_457</name>
+      <pose>14.285344421623499 12.631499799094861 3.5729358740514536 0 0 2.9916091252438406</pose>
+      <scale>0.41693523387444514 0.41693523387444514 0.41693523387444514</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_458</name>
+      <pose>14.91464561208096 -3.588179514679414 2.3983168713362137 0 0 5.939666375432229</pose>
+      <scale>0.5353544498346043 0.5353544498346043 0.5353544498346043</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_459</name>
+      <pose>-4.6014121806279995 12.816303706284906 3.7118673518223764 0 0 5.512955995480364</pose>
+      <scale>0.5171566607436533 0.5171566607436533 0.5171566607436533</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_460</name>
+      <pose>-9.381688562876676 -22.525489557439222 1.065457447987827 0 0 2.974523232699785</pose>
+      <scale>0.23548754664808041 0.23548754664808041 0.23548754664808041</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_461</name>
+      <pose>-1.8649014015916698 -22.24991376891648 0.8655812824949646 0 0 3.1526007166753884</pose>
+      <scale>0.30041794756416995 0.30041794756416995 0.30041794756416995</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_462</name>
+      <pose>17.231906565949046 1.6031701085468768 2.7144274050705692 0 0 3.46922754695885</pose>
+      <scale>0.5635745578548174 0.5635745578548174 0.5635745578548174</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_463</name>
+      <pose>17.717573694129364 -13.759586997387181 1.4543269028329397 0 0 3.8975891952764985</pose>
+      <scale>0.4496688323004767 0.4496688323004767 0.4496688323004767</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_464</name>
+      <pose>7.147777054397629 16.72517014868646 4.041259383267597 0 0 6.214305802384171</pose>
+      <scale>0.4961732056561455 0.4961732056561455 0.4961732056561455</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_465</name>
+      <pose>-12.853167294931323 -6.214771681352882 2.740114143779248 0 0 3.2886138844738553</pose>
+      <scale>0.3688057914288502 0.3688057914288502 0.3688057914288502</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_466</name>
+      <pose>-24.583083105408505 21.102309389973477 4.905936571465871 0 0 1.227845580837586</pose>
+      <scale>0.24184004200391757 0.24184004200391757 0.24184004200391757</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_467</name>
+      <pose>-17.999228033999156 -1.801823221344467 3.262631182134693 0 0 3.9631447548247616</pose>
+      <scale>0.25065808212545027 0.25065808212545027 0.25065808212545027</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_468</name>
+      <pose>2.5694404268604885 -18.106533662329582 1.1877067324992956 0 0 2.097444592110425</pose>
+      <scale>0.5472222204174559 0.5472222204174559 0.5472222204174559</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_469</name>
+      <pose>-18.327159491646903 1.2827912849900365 3.4599677536380744 0 0 3.20628114229174</pose>
+      <scale>0.30099216494425585 0.30099216494425585 0.30099216494425585</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_470</name>
+      <pose>-8.866695009654535 -16.082249973057586 1.7861588753585624 0 0 0.09587232810716957</pose>
+      <scale>0.5896048460409218 0.5896048460409218 0.5896048460409218</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_471</name>
+      <pose>13.035751100412512 -10.576084177522619 2.041793873051665 0 0 1.3490996068390277</pose>
+      <scale>0.2194991219303439 0.2194991219303439 0.2194991219303439</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_472</name>
+      <pose>-12.887045702550395 5.955280279278497 3.5765465330427046 0 0 4.784521865904228</pose>
+      <scale>0.5081837954069435 0.5081837954069435 0.5081837954069435</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_473</name>
+      <pose>6.002704460414201 22.991357296284583 4.546051017567223 0 0 5.803214666641512</pose>
+      <scale>0.24098650582806458 0.24098650582806458 0.24098650582806458</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_474</name>
+      <pose>3.422794838085725 1.0459482327298772 2.748367735098215 0 0 5.97163323398204</pose>
+      <scale>0.45469980495341994 0.45469980495341994 0.45469980495341994</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_475</name>
+      <pose>10.745895414261277 -9.666872004394724 2.1179511031178344 0 0 0.3128915850600577</pose>
+      <scale>0.34855990966114936 0.34855990966114936 0.34855990966114936</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_476</name>
+      <pose>17.767276272360753 8.197144341614518 3.1601758959730084 0 0 5.529975309105281</pose>
+      <scale>0.24783328142212813 0.24783328142212813 0.24783328142212813</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_477</name>
+      <pose>14.986976514135264 -10.892393412160704 1.9044204326846788 0 0 0.5838119436430789</pose>
+      <scale>0.4772621005368463 0.4772621005368463 0.4772621005368463</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_478</name>
+      <pose>12.077780961281626 -15.62698562005541 1.6331103345043236 0 0 2.263224734866154</pose>
+      <scale>0.2601407944171938 0.2601407944171938 0.2601407944171938</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_479</name>
+      <pose>-15.070887812521741 -4.639804479207925 2.9460878042164307 0 0 6.154190507706729</pose>
+      <scale>0.20693532613276033 0.20693532613276033 0.20693532613276033</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_480</name>
+      <pose>-21.34660225896448 -3.7503725318781527 3.349669569158183 0 0 3.9303033996481687</pose>
+      <scale>0.540397251165961 0.540397251165961 0.540397251165961</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_481</name>
+      <pose>-16.779575986683938 6.098303657453844 3.708483491554762 0 0 1.7178795397609656</pose>
+      <scale>0.3455137907909274 0.3455137907909274 0.3455137907909274</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_482</name>
+      <pose>-15.521368689366488 -13.732555743035027 2.1943298384449887 0 0 3.7365087981943965</pose>
+      <scale>0.5775565661190754 0.5775565661190754 0.5775565661190754</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_483</name>
+      <pose>-1.8279768333600828 -18.938967828926526 1.3412577317117784 0 0 3.350989451451163</pose>
+      <scale>0.2938280540880975 0.2938280540880975 0.2938280540880975</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_484</name>
+      <pose>-2.096314832527824 -19.397584760104607 1.2345008137635285 0 0 0.02651110465192406</pose>
+      <scale>0.5654139313300648 0.5654139313300648 0.5654139313300648</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_485</name>
+      <pose>-14.942067534437923 -0.44014696342231474 3.219336984104925 0 0 1.9650883005216724</pose>
+      <scale>0.3132865379925004 0.3132865379925004 0.3132865379925004</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_486</name>
+      <pose>-11.786063171318968 -13.067467770018965 2.172957013544589 0 0 0.9737566570341225</pose>
+      <scale>0.33991171551895494 0.33991171551895494 0.33991171551895494</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_487</name>
+      <pose>4.675932546800425 16.689335182325607 3.977915286310967 0 0 5.017565857753416</pose>
+      <scale>0.3431721785320631 0.3431721785320631 0.3431721785320631</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_488</name>
+      <pose>-4.600576999345979 -15.034171645180102 1.8159688242443954 0 0 4.711147213437879</pose>
+      <scale>0.29492863705760636 0.29492863705760636 0.29492863705760636</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_489</name>
+      <pose>-16.001366642048204 -7.044870291405832 2.8131591360292694 0 0 0.17960867264540828</pose>
+      <scale>0.3152450242579613 0.3152450242579613 0.3152450242579613</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_490</name>
+      <pose>-3.6868447504493815 -22.478768262645282 0.969250609205708 0 0 3.0832838233360174</pose>
+      <scale>0.26879205996858707 0.26879205996858707 0.26879205996858707</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_491</name>
+      <pose>16.08041637648924 -21.603515895619033 0.8126311250248555 0 0 1.1683379250741999</pose>
+      <scale>0.4966793613403431 0.4966793613403431 0.4966793613403431</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_492</name>
+      <pose>23.76361472001617 -13.648521050212084 1.2403903860004408 0 0 1.4026119254122056</pose>
+      <scale>0.3675287091989385 0.3675287091989385 0.3675287091989385</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_493</name>
+      <pose>-12.590421874517322 11.715346792672925 3.9524507757059375 0 0 2.16995075649616</pose>
+      <scale>0.5917555776135941 0.5917555776135941 0.5917555776135941</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_494</name>
+      <pose>16.441536703942113 9.964733961333266 3.3824969854026588 0 0 0.6038487712177877</pose>
+      <scale>0.31908800431417494 0.31908800431417494 0.31908800431417494</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_495</name>
+      <pose>-16.03599195795747 -6.13578184172648 2.850884109847287 0 0 4.64663742176994</pose>
+      <scale>0.31269102142765093 0.31269102142765093 0.31269102142765093</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_496</name>
+      <pose>20.84305460295284 -18.105929409715255 0.9341852053224233 0 0 4.3115529366223155</pose>
+      <scale>0.38903548673444055 0.38903548673444055 0.38903548673444055</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_497</name>
+      <pose>4.0008807320588105 -8.891200120578823 1.9065411100332974 0 0 5.141985689408149</pose>
+      <scale>0.24860723829947018 0.24860723829947018 0.24860723829947018</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_498</name>
+      <pose>-19.361960901996344 9.02334894999386 4.071292586808861 0 0 4.842059471973627</pose>
+      <scale>0.31806138876536333 0.31806138876536333 0.31806138876536333</scale>
+    </include>
+    <include>
+      <uri>model://grass/MT_PM_V60_Cynodon_dactylon_01_01</uri>
+      <name>grass_499</name>
+      <pose>-14.476596606106938 24.9614172996869 4.756377022636868 0 0 1.0958241983719503</pose>
+      <scale>0.42442510774610676 0.42442510774610676 0.42442510774610676</scale>
+    </include>
+  </world>
+</sdf>
