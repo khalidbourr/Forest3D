@@ -45,7 +45,6 @@ A comprehensive toolkit for generating realistic forest environments in Gazebo s
 ```bash
 sudo apt-get update
 sudo apt-get install python3-pip python3-numpy python3-gdal python3-scipy
-pip install -r requirements.txt
 ```
 
 # Install Python packages
