@@ -74,6 +74,15 @@ source ~/.bashrc
 
 ### Usage Guide
 
+#### . For testing the environment already existing
+
+```bash
+cd world
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)/models
+gazebo forest_world.world
+```
+
+
 #### 1. Terrain Generation
 
 ```bash
@@ -83,7 +92,42 @@ python3 TerrainGenerator.py --tif-file terrain.tif
 **Options:**
 - `--tif-file`: Name of the DEM file (must be in `models/ground/dem` directory)
 
-#### 2. Asset Processing
+
+#### 2. Asset Generation
+
+The B2GEngine supports the following categories:
+- `tree`: Large vegetation models
+- `bush`: Small vegetation and shrubs
+- `grass`: Ground cover vegetation
+- `rock`: Rock formations
+- `sand`: Ground textures
+
+### Adding New Assets
+
+1. Place your .blend files in the `Blender-Assets` directory
+2. Add the filename to the appropriate category in `B2GEngine.py`:
+
+```python
+model_categories = {
+    'tree': [
+        "MT_PM_V60_Alnus_cremastogyne_01_01.blend",
+        "MT_PM_V60_Acer_buergerianum_01_01.blend"
+    ],
+    'bush': [
+        "MT_PM_V60_Cistus_albidus_01_01.blend",
+        "MT_PM_V60_Agave_sisalana_01_01.blend"
+    ],
+    'grass': [
+        "MT_PM_V60_Cynodon_dactylon_01_01.blend"
+    ],
+    'rock': [
+        "coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6.blend"
+    ],
+    'sand': [
+        "sand-dune_2K_0a625146-f652-4724-ad1f-ff705a37da8f.blend"
+    ]      
+}
+```
 
 ```bash
 python3 B2GEngine.py --blender-path /path/to/blender \
@@ -99,7 +143,7 @@ python3 B2GEngine.py --blender-path /path/to/blender \
 #### 3. Forest Generation
 
 ```bash
-python3 ForestGenerator.py --density '{"tree":25,"rock":5,"bush":10,"grass":500}'
+python3 main.py --density '{"tree":25,"rock":5,"bush":10,"grass":500}'
 ```
 
 #### 4. Gazebo Forest World Launch
@@ -109,7 +153,6 @@ cd world
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)/models
 gazebo forest_world.world
 ```
-
 
 **Options:**
 - `--base-path`: Project base path
