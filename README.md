@@ -101,6 +101,14 @@ python3 B2GEngine.py --blender-path /path/to/blender \
 python3 ForestGenerator.py --density '{"tree":25,"rock":5,"bush":10,"grass":500}'
 ```
 
+#### 4. Gazebo Forest World Launch
+
+```bash
+cd world
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)/models
+gazebo forest_world.world
+```
+
 
 **Options:**
 - `--base-path`: Project base path
