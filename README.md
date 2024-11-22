@@ -45,6 +45,7 @@ A comprehensive toolkit for generating realistic forest environments in Gazebo s
 ```bash
 sudo apt-get update
 sudo apt-get install python3-pip python3-numpy python3-gdal python3-scipy
+pip install -r requirements.txt
 ```
 
 # Install Python packages
@@ -60,7 +61,8 @@ pip3 install numpy-stl
 
 ```bash
 git clone https://github.com/khalidbourr/Forest3D.git
-cd forest-generator
+cd Forest3D
+pip install -r requirements.txt
 ```
 
 
