@@ -59,7 +59,7 @@ pip3 install numpy-stl
 # Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/forest-generator.git
+git clone https://github.com/khalidbourr/Forest3D.git
 cd forest-generator
 ```
 
