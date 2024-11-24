@@ -211,7 +211,6 @@ bpy.ops.wm.collada_export(
             f.write(sdf_content)
         print(f"Created SDF file: {sdf_path}")
 
-    # [Other methods remain the same]
     def _create_material_file(self, model_name, textures, materials_dir):
         """Create a material file with base color texture"""
         # Find the most appropriate base texture
