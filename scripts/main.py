@@ -26,9 +26,10 @@ def load_default_density():
     """Load default density configuration"""
     return {
         'rock': 5,     # Number of rocks
-        'tree': 25,    # Number of trees
+        'tree': 50,    # Number of trees
         'bush': 10,     # Number of bushes
-        'grass': 500    # Number of grass patches
+        'grass': 50,   # Number of grass patches
+        'sand': 5    # Number of sand patches
     }
 
 def load_config_file(config_path):

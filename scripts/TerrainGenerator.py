@@ -3,11 +3,9 @@ import numpy as np
 from osgeo import gdal
 import os
 from stl import mesh
-from xml.etree import ElementTree as ET
 from scipy.ndimage import gaussian_filter
 from pathlib import Path
 import sys
-import shutil
 import argparse
 
 class TerrainGenerator:
@@ -16,7 +14,7 @@ class TerrainGenerator:
         self.dem_path = self.base_path / "models/ground/dem"
         self.terrain_path = self.base_path / "models/ground"
         self.mesh_path = self.terrain_path / "mesh"
-        self.material_path = self.terrain_path / "material" 
+        self.material_path = self.terrain_path / "material"
         self.texture_path = self.terrain_path / "texture"
         self.worlds_path = self.base_path / "worlds"
         self.tif_filename = tif_filename
@@ -43,14 +41,12 @@ class TerrainGenerator:
                 print(f"Missing: {file_path}")
         
         if missing_files:
-
             raise FileNotFoundError("\n".join(missing_files))
 
-    def enhance_resolution(self, scale_factor=6.0):
-        """Enhance DEM resolution"""
+    def enhance_dem(self, scale_factor=6.0):
+        """Optional DEM enhancement"""
         input_tiff = self.dem_path / self.tif_filename
         output_tiff = self.dem_path / "terrain_enhanced.tif"
-        heightmap_tiff = self.dem_path / "enhanced_heightmap.tif"
         
         try:
             ds = gdal.Open(str(input_tiff))
@@ -66,90 +62,102 @@ class TerrainGenerator:
                 options=['COMPRESS=LZW']
             )
             
-            heightmap_data = ds.GetRasterBand(1).ReadAsArray()
-            heightmap_data = gaussian_filter(heightmap_data, sigma=1.0)
-            driver = gdal.GetDriverByName('GTiff')
-            heightmap_ds = driver.Create(str(heightmap_tiff), 
-                                       heightmap_data.shape[1],
-                                       heightmap_data.shape[0],
-                                       1,
-                                       gdal.GDT_Float32)
-            heightmap_ds.GetRasterBand(1).WriteArray(heightmap_data)
-            
             return output_tiff
         except Exception as e:
-            print(f"Error enhancing resolution: {e}")
+            print(f"Error enhancing DEM: {e}")
             sys.exit(1)
 
-    def create_terrain_mesh(self, scale_xy=0.25, scale_z=5.0, z_offset=0):
-        """Generate terrain mesh from heightmap"""
+    def create_terrain_mesh(self, scale_factor=1.0, smooth_sigma=1.0, enhance=False):
+        """Generate terrain mesh from DEM while maintaining proportions"""
         try:
-            heightmap = self._process_heightmap()
-            vertices = self._generate_vertices(heightmap, scale_xy, scale_z, z_offset)
-            faces = self._generate_faces(heightmap.shape)
+            # Determine which DEM file to use
+            if enhance:
+                dem_file = self.enhance_dem()
+                print("Using enhanced DEM...")
+            else:
+                dem_file = self.dem_path / self.tif_filename
+                print("Using original DEM...")
+
+            # Open DEM file
+            ds = gdal.Open(str(dem_file))
+            if ds is None:
+                raise ValueError(f"Failed to open {dem_file}")
+
+            # Get geotransform information
+            geotransform = ds.GetGeoTransform()
+            pixel_width = abs(geotransform[1])  # X resolution
+            pixel_height = abs(geotransform[5])  # Y resolution
+
+            # Read elevation data
+            elevation = ds.GetRasterBand(1).ReadAsArray().astype(np.float32)
             
+            # Apply smoothing if requested
+            if smooth_sigma > 0:
+                elevation = gaussian_filter(elevation, sigma=smooth_sigma)
+
+            # Get dimensions
+            rows, cols = elevation.shape
+            
+            # Create vertices
+            vertices = []
+            faces = []
+            
+            # Calculate real-world coordinates using geotransform
+            for y in range(rows):
+                for x in range(cols):
+                    # Convert pixel coordinates to real-world coordinates
+                    world_x = x * pixel_width * scale_factor
+                    world_y = y * pixel_height * scale_factor
+                    world_z = elevation[y, x] * scale_factor
+                    
+                    vertices.append([world_x, world_y, world_z])
+
+            # Generate faces (triangles)
+            for y in range(rows - 1):
+                for x in range(cols - 1):
+                    v0 = y * cols + x
+                    v1 = v0 + 1
+                    v2 = (y + 1) * cols + x
+                    v3 = v2 + 1
+                    faces.extend([[v0, v1, v2], [v1, v3, v2]])
+
+            # Create the mesh
+            vertices = np.array(vertices)
+            faces = np.array(faces)
+            
+            # Center the mesh
+            center = np.mean(vertices, axis=0)
+            vertices -= center
+            
+            # Create the STL mesh
             terrain = mesh.Mesh(np.zeros(len(faces), dtype=mesh.Mesh.dtype))
             for i, f in enumerate(faces):
                 for j in range(3):
                     terrain.vectors[i][j] = vertices[f[j]]
-            
+
+            # Save the mesh
             output_path = self.mesh_path / "terrain.stl"
             terrain.save(str(output_path))
             print(f"Created terrain mesh at: {output_path}")
+            
+            # Print terrain statistics
+            x_extent = np.ptp(vertices[:, 0])
+            y_extent = np.ptp(vertices[:, 1])
+            z_extent = np.ptp(vertices[:, 2])
+            print(f"\nTerrain dimensions:")
+            print(f"X extent: {x_extent:.2f} units")
+            print(f"Y extent: {y_extent:.2f} units")
+            print(f"Z extent: {z_extent:.2f} units")
+            print(f"Number of vertices: {len(vertices)}")
+            print(f"Number of faces: {len(faces)}")
+            
             return output_path
+
         except Exception as e:
             print(f"Error creating terrain mesh: {e}")
+            import traceback
+            traceback.print_exc()
             sys.exit(1)
-
-    def _process_heightmap(self, max_size=400):
-        """Process heightmap from enhanced DEM"""
-        enhanced_tiff = self.dem_path / "terrain_enhanced.tif"
-        if not enhanced_tiff.exists():
-            print("Error: Enhanced terrain file not found. Run enhance_resolution first.")
-            sys.exit(1)
-            
-        ds = gdal.Open(str(enhanced_tiff))
-        heightmap = ds.GetRasterBand(1).ReadAsArray().astype(np.float32)
-        heightmap = gaussian_filter(heightmap, sigma=1.0)
-        
-        rows, cols = heightmap.shape
-        if rows > max_size or cols > max_size:
-            skip_x = max(1, cols // max_size)
-            skip_y = max(1, rows // max_size)
-            heightmap = heightmap[::skip_y, ::skip_x]
-        
-        # Normalize and enhance contrast
-        p2, p98 = np.percentile(heightmap, (2, 98))
-        heightmap = np.clip(heightmap, p2, p98)
-        heightmap = np.power((heightmap - p2) / (p98 - p2), 0.75)
-        
-        return heightmap
-
-    def _generate_vertices(self, heightmap, scale_xy, scale_z, z_offset):
-        """Generate vertices from heightmap"""
-        rows, cols = heightmap.shape
-        vertices = []
-        for y in range(rows):
-            for x in range(cols):
-                vertices.append([
-                    (x - cols/2) * scale_xy,
-                    (y - rows/2) * scale_xy,
-                    heightmap[y, x] * scale_z + z_offset
-                ])
-        return np.array(vertices)
-
-    def _generate_faces(self, shape):
-        """Generate faces for the mesh"""
-        rows, cols = shape
-        faces = []
-        for y in range(rows - 1):
-            for x in range(cols - 1):
-                v0 = y * cols + x
-                v1 = v0 + 1
-                v2 = (y + 1) * cols + x
-                v3 = v2 + 1
-                faces.extend([[v0, v1, v2], [v1, v3, v2]])
-        return np.array(faces)
 
     def _create_sdf_file(self):
         """Create SDF file for the terrain model"""
@@ -213,19 +221,16 @@ class TerrainGenerator:
         world_content = '''<?xml version="1.0" ?>
 <sdf version="1.7">
     <world name="default">
-        <!-- Add a sun to the world -->
         <include>
             <uri>model://sun</uri>
         </include>
         
-        <!-- Add our terrain model -->
         <include>
             <name>terrain</name>
             <uri>model://ground</uri>
             <pose>0 0 0 0 0 0</pose>
         </include>
         
-        <!-- Add physics properties -->
         <physics type="ode">
             <real_time_update_rate>1000.0</real_time_update_rate>
             <max_step_size>0.001</max_step_size>
@@ -239,19 +244,20 @@ class TerrainGenerator:
         world_path.write_text(world_content)
         print(f"Created test world file: {world_path}")
 
-    def process_terrain(self):
+    def process_terrain(self, scale_factor=1.0, smooth_sigma=1.0, enhance=False):
         """Process complete terrain generation pipeline"""
         print("\nStarting terrain generation pipeline...")
         print("\n1. Verifying directory structure...")
         self._verify_paths()
 
-        print("\n2. Enhancing DEM resolution...")
-        self.enhance_resolution()
-
-        print("\n3. Creating terrain mesh...")
-        stl_path = self.create_terrain_mesh()
+        print("\n2. Creating terrain mesh...")
+        stl_path = self.create_terrain_mesh(
+            scale_factor=scale_factor,
+            smooth_sigma=smooth_sigma,
+            enhance=enhance
+        )
         
-        print("\n4. Creating Gazebo model files...")
+        print("\n3. Creating Gazebo model files...")
         self._create_sdf_file()
         self._create_config_file()
         self._create_test_world()
@@ -259,16 +265,26 @@ class TerrainGenerator:
         return self.terrain_path
 
 def main():
-    parser = argparse.ArgumentParser(description='Terrain Generator for Gazebo')
+    parser = argparse.ArgumentParser(description='DEM to Gazebo Terrain Generator')
     parser.add_argument('--tif-file', type=str, default='terrain.tif',
-                       help='Name of the .tif file in models/ground/dem directory (default: terrain.tif)')
+                       help='Name of the .tif file in models/ground/dem directory')
+    parser.add_argument('--scale', type=float, default=1.0,
+                       help='Scale factor for the entire terrain (default: 1.0)')
+    parser.add_argument('--smooth', type=float, default=1.0,
+                       help='Smoothing factor for the terrain (default: 1.0)')
+    parser.add_argument('--enhance', action='store_true',
+                       help='Enable DEM enhancement (default: False)')
     
     args = parser.parse_args()
     print(f"\nProcessing terrain file: {args.tif_file}")
     
     try:
         generator = TerrainGenerator(args.tif_file)
-        model_path = generator.process_terrain()
+        model_path = generator.process_terrain(
+            scale_factor=args.scale,
+            smooth_sigma=args.smooth,
+            enhance=args.enhance
+        )
         
         print("\nTerrain generation completed successfully!")
         print(f"\nTo use in Gazebo:")
@@ -278,9 +294,8 @@ def main():
     except Exception as e:
         print(f"\nError in terrain generation: {str(e)}")
         print("\nUsage:")
-        print("python3 TerrainGeneratorV2.py --tif-file terrain.tif")
+        print("python3 terrain_generator.py --tif-file terrain.tif [--scale 1.0] [--smooth 1.0] [--enhance]")
         sys.exit(1)
 
 if __name__ == "__main__":
     main()
-

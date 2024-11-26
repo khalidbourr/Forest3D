@@ -327,10 +327,13 @@ def main():
             "MT_PM_V60_Cynodon_dactylon_01_01.blend"
         ],
         'rock': [
-            "coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6.blend"
+            "coast-land-rocks-04_2K_9d63d4e8-5064-4b62-8bfa-f7d45027fcf6.blend",
+            "photoscanned-rock-03_2K_6669afd9-de42-4d31-9b27-ec4e7f815039.blend",
+            "rock_2K_bf18f3e1-4f7c-457d-b70a-56315998a211.blend"
         ],
         'sand': [
-            "sand-dune_2K_0a625146-f652-4724-ad1f-ff705a37da8f.blend"
+            "sand-dune_2K_0a625146-f652-4724-ad1f-ff705a37da8f.blend",
+            "sand-rocks-small-01_2K_e14d6880-1c63-4176-a598-1c68a5f910bd.blend"
         ]      
     }
     
