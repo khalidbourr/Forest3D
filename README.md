@@ -251,3 +251,54 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 3. **Terrain Generation**
    - Validate DEM format
    - Check GDAL installation
+
+## ROS Melodic Python Dependencies
+
+### Overview
+When using ROS Melodic (Python 2.7), you'll need a separate Python 3.8 environment for Forest3D dependencies while maintaining ROS functionality.
+
+### Setup Python 3.8 Environment
+
+1. Install Python 3.8
+```bash
+# Install required tools
+apt update
+apt install software-properties-common
+
+# Add Python repository
+add-apt-repository ppa:deadsnakes/ppa
+apt update
+
+# Install Python 3.8
+apt install python3.8 python3.8-venv python3.8-dev
+# Create Python 3.8 environment
+python3.8 -m venv ~/forest3d_env
+
+# Activate environment
+source ~/forest3d_env/bin/activate
+
+# Update pip
+pip install --upgrade pip
+# Install GDAL system packages
+apt update
+apt install python3-gdal gdal-bin libgdal-dev
+
+# Set GDAL environment variables
+export CPLUS_INCLUDE_PATH=/usr/include/gdal
+export C_INCLUDE_PATH=/usr/include/gdal
+
+# Install matching GDAL Python bindings
+pip install "pygdal==`gdal-config --version`.*"
+
+# Modify requirements.txt:
+numpy>=1.21.0
+scipy>=1.7.0
+numpy-stl>=2.16.0
+pathlib>=1.0.1
+black>=22.3.0
+pylint>=2.12.0
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Install requirements:
+pip install -r requirements.txt
