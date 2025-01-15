@@ -238,36 +238,30 @@ class WorldPopulator:
         return x, y, z
 
     def _add_lighting(self, world):
-        """Add lighting to the world"""
-        # Add sun
-        sun = ET.SubElement(world, 'include')
-        ET.SubElement(sun, 'uri').text = 'model://sun'
-
-        # Add ambient light
-        ambient = ET.SubElement(world, 'light', {'name': 'ambient', 'type': 'directional'})
-        ET.SubElement(ambient, 'cast_shadows').text = 'true'
-        ET.SubElement(ambient, 'pose').text = '0 0 10 0 0 0'
-        ET.SubElement(ambient, 'diffuse').text = '0.7 0.7 0.7 1'
-        ET.SubElement(ambient, 'specular').text = '0.1 0.1 0.1 1'
-        ET.SubElement(ambient, 'direction').text = '0.1 0.1 -0.9'
-
-        # Add point lights
-        light_positions = [
-            (10, 10, 5), (-10, 10, 5),
-            (10, -10, 5), (-10, -10, 5)
-        ]
-        
-        for i, (x, y, z) in enumerate(light_positions):
+            """Add optimized lighting to the world"""
+            # Add sun with optimized settings
+            sun = ET.SubElement(world, 'include')
+            ET.SubElement(sun, 'uri').text = 'model://sun'
+            
+            # Add single ambient light with optimized settings
+            ambient = ET.SubElement(world, 'light', {'name': 'ambient', 'type': 'directional'})
+            ET.SubElement(ambient, 'cast_shadows').text = 'false'  # Disable shadow casting for performance
+            ET.SubElement(ambient, 'pose').text = '0 0 10 0 0 0'
+            ET.SubElement(ambient, 'diffuse').text = '0.8 0.8 0.8 1'
+            ET.SubElement(ambient, 'specular').text = '0.1 0.1 0.1 1'
+            ET.SubElement(ambient, 'direction').text = '0.1 0.1 -0.9'
+            
+            # Add single point light for additional illumination
             point = ET.SubElement(world, 'light', {
-                'name': f'point_light_{i}',
+                'name': 'point_light',
                 'type': 'point'
             })
             ET.SubElement(point, 'cast_shadows').text = 'false'
-            ET.SubElement(point, 'pose').text = f'{x} {y} {z} 0 0 0'
-            ET.SubElement(point, 'diffuse').text = '0.4 0.4 0.4 1'
-            ET.SubElement(point, 'specular').text = '0.1 0.1 0.1 1'
+            ET.SubElement(point, 'pose').text = '0 0 10 0 0 0'
+            ET.SubElement(point, 'diffuse').text = '0.3 0.3 0.3 1'
+            ET.SubElement(point, 'specular').text = '0.05 0.05 0.05 1'
             ET.SubElement(point, 'attenuation')
-            ET.SubElement(point, 'range').text = '20'
+            ET.SubElement(point, 'range').text = '30'
 
     def create_forest_world(self, density_config):
         """Create forest world with all variants including sand"""
