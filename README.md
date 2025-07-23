@@ -1,6 +1,6 @@
 # Forest Generator for Gazebo Simulation 
 
-A comprehensive toolkit for generating realistic forest environments in Gazebo simulation, including terrain generation from DEM data and procedural placement of various natural elements like trees, rocks, bushes, and grass.
+Forest3D is an advanced terrain generation and environmental modeling toolkit that transforms real-world geographical data into photorealistic Gazebo simulation environments. The system processes Digital Elevation Model (DEM) data through sophisticated interpolation and smoothing algorithms to create detailed 3D terrain meshes, while automatically converting Blender assets into optimized simulation-ready models with proper collision geometry. Through intelligent procedural placement algorithms, Forest3D populates terrains with diverse natural elements including trees, vegetation, rocks, and ground features, considering factors like terrain slope, elevation, and ecological distribution patterns. The toolkit seamlessly integrates with Gazebo through automated SDF generation, enabling researchers and developers to rapidly create realistic outdoor environments for robotics simulation, autonomous vehicle testing, and environmental modeling applications.
 
 ![Forest3D Environment](https://github.com/khalidbourr/Forest3D/blob/main/Screenshot%20from%202024-11-21%2022-29-42.png)
 
